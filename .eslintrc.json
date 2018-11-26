@@ -1,0 +1,23 @@
+{
+    "env": {
+		"browser": true,
+		"es6": true,
+		"jest": true
+	},
+	"extends": ["airbnb", "prettier"],
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 2018,
+		"sourceType": "module"
+	},
+	"plugins": ["react", "eslint-plugin-github"],
+	"rules": {
+		"indent": ["error", 2],
+		"linebreak-style": ["error", "unix"],
+		"quotes": ["error", "double"],
+		"semi": ["error", "always"]
+	}
+}
