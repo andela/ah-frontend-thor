@@ -4,4 +4,3 @@ eslint:
   version: 5
   config_file: .eslintrc.js
 
-
