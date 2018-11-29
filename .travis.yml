@@ -15,8 +15,22 @@ before_install:
   # Launch XVFB
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
+cache:
+  directories:
+    - node_modules
+addons:
+  code_climate
+env:
+  global:
+    - CC_TEST_REPORTER_ID=771376ccd983452d76ec79757a8b618ac040da1c3e1ef64de70d840722a11174
 install:
   - yarn
-
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 scripts:
   - yarn test --coverage
+  - bundle exec rspec
+after_script:
+  - ./cc-test-reporter after-build --debug --exit-code $TRAVIS_TEST_RESULT
