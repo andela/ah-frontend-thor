@@ -1,0 +1,47 @@
+.View {
+	background: url("https://mdbootstrap.com/img/Photos/Others/img (51).jpg")no-repeat center center;
+	background-size: cover;
+}
+@media (min-width: 768px) {
+	.View {
+			overflow: visible;
+			margin-top: -10px;
+	}
+}
+.navbar {
+	z-index: 1;
+}
+
+.View {
+height: 100%;
+}
+/* Pagination */
+.blog-pagination {
+	margin-bottom: 4rem;
+}
+.blog-pagination > .btn {
+	border-radius: 2rem;
+}
+.articles{
+	margin-top: 100px;
+}
+.social-view{
+	margin-top: 35vh;
+}
+.card-comments img {
+	width: 4rem; }
+.article-icons {
+	display: inline-block;
+	}
+	.Card {
+			margin: 0 auto; /* Added */
+						float: none; /* Added */
+						margin-bottom: 10px; /* Added */
+		}
+		input.form-control.no-border,textarea.form-control.no-border {
+					border: 0 !important;
+					box-shadow: none !important; 
+	}
+	.in-font {
+			font-size: 40px;
+}
