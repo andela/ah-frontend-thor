@@ -35,12 +35,7 @@ describe("<AppRouter />", () => {
   });
 });
 
-// describe("<Login />", () => {
-//   it("should render section", () => {
-// 		const editor = shallow(<Login />);
-//     expect(editor.find("section.mt-4").length).toEqual(1);
-//   });
-// });
+
 
 describe("<Header />", () => {
   it("should render NavLink", () => {
