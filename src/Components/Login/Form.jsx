@@ -1,5 +1,6 @@
 import React from "react";
 import Buttons from "./Buttons";
+import Input from "./Input";
 
 
 const Form = ({ onSubmit, auth, onChangeEmail, onChangePassword , options}) => {
@@ -20,17 +21,12 @@ const Form = ({ onSubmit, auth, onChangeEmail, onChangePassword , options}) => {
 												{auth.errors &&  <span id="sp" style={{"color":"red", "display":"block"}}> {auth.errors}</span>	}
 												</div>
 
-												
-												<div className="md-form">
-														<input type="email" id="materialLoginFormEmail" className="form-control" onChange={onChangeEmail}/>
-														<label htmlFor="materialLoginFormEmail">E-mail</label>
-												</div>
-
-												
-												<div className="md-form">
-														<input type="password" id="materialLoginFormPassword" className="form-control" onChange={onChangePassword}/>
-														<label htmlFor="materialLoginFormPassword">Password</label>
-												</div>
+												<Input onChange={onChangeEmail} 
+													type={"email"} id={"materialLoginFormEmail"} innerHtml={"Email"}
+												/>
+												<Input onChange={onChangePassword} 
+													type={"password"} id={"materialLoginFormPassword"} innerHtml={"Password"}
+												/>
 
 												<div className="d-flex justify-content-around">
 														
@@ -48,3 +44,4 @@ const Form = ({ onSubmit, auth, onChangeEmail, onChangePassword , options}) => {
 }
 
 export default Form;
+
