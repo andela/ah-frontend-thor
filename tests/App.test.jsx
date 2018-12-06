@@ -4,7 +4,7 @@ import { mount, shallow } from "enzyme";
 import puppeteer from "puppeteer";
 
 // import App from "../src/components/App";
-import AppRouter from "../src/components/AppRouter";
+// import AppRouter from "../src/components/AppRouter";
 
 // import Login from "../src/Components/Login/Login";
 import Header from "../src/components/Header";
@@ -29,11 +29,11 @@ import Root from "../src/components/Root";
 
 // jest.mock('../Components/Login/', () => () => 'Login');
 
-describe("<AppRouter />", () => {
-  it("should render without crashing", () => {
-    expect(mount.bind(null, <AppRouter />)).not.toThrow();
-  });
-});
+// describe("<AppRouter />", () => {
+//   it("should render without crashing", () => {
+//     expect(mount.bind(null, <AppRouter />)).not.toThrow();
+//   });
+// });
 
 
 
