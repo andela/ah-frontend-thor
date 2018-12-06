@@ -29,5 +29,4 @@ const renderSocialAuthButtons = (props) => {
 
 const SocialAuthButton =(className1, className2) => (<SocialAuthButtons key={className1} className1={className1} className2={className2} />);
 
-
 export default renderSocialAuthButtons;
