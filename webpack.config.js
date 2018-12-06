@@ -8,7 +8,8 @@ const config = {
 	entry: ["babel-polyfill","./src/index.jsx"],
 	output: {
 		path: path.resolve(__dirname, "dist"),
-		filename: "bundle.js"
+		filename: "bundle.js",
+		publicPath: '/'
 	},
 	resolve: {
 		extensions: [".js", ".jsx"]
@@ -28,6 +29,9 @@ const config = {
 				use: ["file-loader"]
 			}
 		]
+	},
+	devServer: {
+		historyApiFallback: true,
 	},
 	plugins: [
 		new HTMLWebpackPlugin({

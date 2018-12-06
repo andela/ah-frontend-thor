@@ -4,22 +4,22 @@ import SocialAuthButtons from "./SocialAuthButtons";
 const renderSocialAuthButtons = (props) => {
 	const { facebook, twitter, google } = props;
 	const buttons = ["f", "t", "g"];
-	let [classN1, classN2] = ["", ""];
+	let [className1, className2] = ["", ""];
 	return ( 
 		buttons.map( tag => {
 
 			if (tag === "f"){
-				classN1 = facebook.classN1;
-				classN2 = facebook.classN2;
-				SocialAuthButton(classN1, classN2);
+				className1 = facebook.className1;
+				className2 = facebook.className2;
+				SocialAuthButton(className1, className2);
 			} else if (tag === "t") {
-				classN1 = twitter.classN1;
-				classN2 = twitter.classN2;
-				SocialAuthButton(classN1, classN2);
+				className1 = twitter.className1;
+				className2 = twitter.className2;
+				SocialAuthButton(className1, className2);
 			}else {
-				classN1 = tag === "g" ? google.classN1: null;
-				classN2 = tag === "g" ? google.classN2: null;
-				SocialAuthButton(classN1, classN2);
+				className1 = tag === "g" ? google.className1: null;
+				className2 = tag === "g" ? google.className2: null;
+				SocialAuthButton(className1, className2);
 			}
 			
 			}
@@ -27,7 +27,7 @@ const renderSocialAuthButtons = (props) => {
 	);
 }
 
-const SocialAuthButton =(classN1, classN2) => (<SocialAuthButtons key={classN1} classN1={classN1} classN2={classN2} />);
+const SocialAuthButton =(className1, className2) => (<SocialAuthButtons key={className1} className1={className1} className2={className2} />);
 
 
 export default renderSocialAuthButtons;

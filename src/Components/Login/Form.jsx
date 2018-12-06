@@ -8,7 +8,7 @@ const Form = ({ onSubmit, auth, onChangeEmail, onChangePassword , options}) => {
 		<div className="row">
 			<div className="col-md-6 mb-3 offset-md-3">
 					<div className="text-center mb-4 wow fadeIn">
-							
+
 							<div className="card">
 
 									<h5 className="card-header black white-text text-center mt-0 py-4">
@@ -44,4 +44,3 @@ const Form = ({ onSubmit, auth, onChangeEmail, onChangePassword , options}) => {
 }
 
 export default Form;
-

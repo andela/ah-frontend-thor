@@ -1,10 +1,10 @@
 import React from "react";
 
-const SocialAuthButtons = ({ classN1, classN2 }) => {
+const SocialAuthButtons = ({ className1, className2 }) => {
 	return (
 		<React.Fragment>
-			<a className={classN1}>
-					<i className={classN2}></i>
+			<a className={className1}>
+					<i className={className2}></i>
 			</a>
 		</React.Fragment>
 	);

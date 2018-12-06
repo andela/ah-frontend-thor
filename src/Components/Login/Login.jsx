@@ -4,6 +4,12 @@ import login from "../../actions/loginActions";
 import Form from "./Form";
 
 
+const options = {
+	"facebook":{"className1": "btn-floating btn-fb btn-lg", "className2": "fa fa-facebook"},
+	"twitter": {"className1": "btn-floating btn-tw btn-lg", "className2": "fa fa-twitter"},
+	"google": { "className1": "btn-floating btn-gplus btn-lg", "className2": "fa fa-google-plus"}
+}
+
 class Login extends Component {
 	state = {
 		email: "",
@@ -11,7 +17,7 @@ class Login extends Component {
 		options
 	};
 
-	loginUser = e => {
+	loginUser = event => {
 		e.preventDefault();
 		const { email, password} = this.state;
 		
@@ -21,12 +27,12 @@ class Login extends Component {
 	};
 
 
-	onChangeEmail = e =>{
-		this.setState({ email: e.target.value});
+	onChangeEmail = event =>{
+		this.setState({ email: event.target.value});
 	}
 
-	onChangePassword = e =>{
-		this.setState({ password: e.target.value});
+	onChangePassword = event =>{
+		this.setState({ password: event.target.value});
 	}
 	
 	render() {
@@ -49,13 +55,6 @@ class Login extends Component {
 			
 		);
 	}
-}
-
-
-const options = {
-	"facebook":{"classN1": "btn-floating btn-fb btn-lg", "classN2": "fa fa-facebook"},
-	"twitter": {"classN1": "btn-floating btn-tw btn-lg", "classN2": "fa fa-twitter"},
-	"google": { "classN1": "btn-floating btn-gplus btn-lg", "classN2": "fa fa-google-plus"}
 }
 
 
