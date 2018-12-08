@@ -7,3 +7,6 @@ engines:
       languages:
         javascript:
           mass_threshold: 75
+checks:
+  argument-count:
+    enabled: false

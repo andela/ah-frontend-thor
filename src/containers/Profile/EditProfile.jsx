@@ -1,5 +1,10 @@
+/* eslint-disable react/jsx-no-duplicate-props */
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable react/no-unused-state */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable class-methods-use-this */
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import toastr from "toastr";
 import { editProfile, saveImage } from "../../actions/profileAction";

@@ -30,7 +30,7 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 scripts:
-  - yarn test --coverage
+  - yarn test -u --coverage
   - bundle exec rspec
 after_script:
   - ./cc-test-reporter after-build --debug --exit-code $TRAVIS_TEST_RESULT

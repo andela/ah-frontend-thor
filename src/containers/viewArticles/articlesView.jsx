@@ -1,3 +1,10 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable consistent-return */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable jsx-a11y/img-redundant-alt */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/button-has-type */
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-len */
 import React, { Component } from "react";
 import { connect } from "react-redux";

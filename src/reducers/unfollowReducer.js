@@ -3,22 +3,22 @@
 /* eslint-disable no-dupe-keys */
 /* eslint-disable no-lone-blocks */
 
-import {errorAlert, alert} from "../actions/loginActions";
+import {alert} from "../actions/loginActions";
 
-const loginChecker = (state, action) => {
+const unfollowChecker = (state, action) => {
   switch (action.type) {
-  case "LOGIN":{
+  case "UNFOLLOW":{
     if (action.payload) {
-      alert("success", null, action.payload.username, action.payload.user_token, "/");
+      window.location.reload();
       return {
         ...state,
-        token: action.payload.user_token
+        data: action.payload
       };
     }};
 
-  case "LOGIN_ERROR":{
+  case "UNFOLLOW_ERROR":{
     if (action.payload) {
-      errorAlert("error", action.payload);
+      alert("error", action.payload, null, null, null);
       return {
         ...state,
         errors: action.payload
@@ -32,7 +32,7 @@ const loginChecker = (state, action) => {
 
 const initialState = {
   errors: "",
-  user: null
+  results: {}
 };
 
-export default (state = initialState, action) => (loginChecker(state, action));
+export default (state = initialState, action) => (unfollowChecker(state, action));

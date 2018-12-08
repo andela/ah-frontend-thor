@@ -84,6 +84,6 @@ describe("test set timeouts", ()=>{
     alert("success", null, "user", "password", "/");
 
     expect(setTimeout).toHaveBeenCalled();
-    expect(setTimeout).toHaveBeenLastCalledWith(expect.anything(), 3000);
+    expect(setTimeout).toHaveBeenLastCalledWith(expect.anything(), 5000);
   });
 });

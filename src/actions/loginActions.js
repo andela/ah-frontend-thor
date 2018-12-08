@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable no-self-assign */
 /* eslint-disable no-undef */
 /* eslint-disable prefer-destructuring */
@@ -5,18 +6,29 @@ import toastr from "toastr";
 
 export const loginUrl = "https://ah-backend-thor.herokuapp.com/api/users/login/";
 
-export const alert=(type,errorMsg,username, token, url)=>{
-  if(type === "error" || "success"  && !username && !token){
-    type === "success" ? toastr.success(errorMsg) && setTimeout(() => window.location.replace(url), 3000): toastr.error(errorMsg);
-  }
-  else if(type==="success" && !errorMsg){
-    toastr.success(`Logging in as ${username}!`);
-    localStorage.setItem("token", token);
-    localStorage.setItem("username", username);
-    setTimeout(() => window.location.replace(url), 3000);
-  };
 
+function storeDataToast(username, token, url){
+  toastr.success(`Logging in as ${username}!`);
+  localStorage.setItem("token", token);
+  localStorage.setItem("username", username);
+  window.location.replace(url);
 };
+
+function toastSuccessStoreData(type, errorMsg , username, token, url){
+  type==="success" && !errorMsg && storeDataToast( username, token, url);
+};
+
+function toastError(type, errorMsg){
+  type === "error" && errorMsg ? toastr.error(errorMsg): null;
+};
+function toastSuccess(type, errorMsg, url){
+  type === "success" ? toastr.success(errorMsg) && url && setTimeout(() => window.location.replace(url), 3000): toastError(type, errorMsg);
+};
+export const alert=(type,errorMsg,username, token, url)=>(
+  type === "error" || "success"  && !username && !token ? toastSuccess(type, errorMsg, url):
+    toastSuccessStoreData(type, errorMsg, username, token, url)
+
+);
 
 export const errorAlert =(type,errorMsg)=>((alert(type,errorMsg,null,null)));
 

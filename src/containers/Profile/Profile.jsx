@@ -1,8 +1,15 @@
+/* eslint-disable consistent-return */
+/* eslint-disable jsx-a11y/img-redundant-alt */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/sort-comp */
+/* eslint-disable class-methods-use-this */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { fetchProfile } from "../../actions/profileAction";
 import { Link } from "react-router-dom";
+import { fetchProfile } from "../../actions/profileAction";
+import FollowStatus from "../../components/FollowStatus";
 
 export class Profile extends Component {
   localStorageFunction() {
@@ -13,10 +20,11 @@ export class Profile extends Component {
     }
     return "stored";
   }
+
   editButton() {
     return (
       <div className="text-center mt-4">
-        <Link to={"/EditProfile"}>
+        <Link to="/EditProfile">
           <button
             className="btn btn-outline-info btn-rounded  waves-effect z-depth-0 pull-right"
             type="submit"
@@ -27,6 +35,7 @@ export class Profile extends Component {
       </div>
     );
   }
+
   image() {
     return (
       <div className="avatar mx-auto text-center">
@@ -38,13 +47,17 @@ export class Profile extends Component {
       </div>
     );
   }
+
   bio() {
     return (
       <p>
-        <i className="fa fa-quote-left" /> {this.props.profile.user.bio}
+        <i className="fa fa-quote-left" />
+        {" "}
+        {this.props.profile.user.bio}
       </p>
     );
   }
+
   mainProfile() {
     return (
       <div className="card cloudy-knoxville-gradient mb-4 wow fadeIn">
@@ -61,40 +74,50 @@ export class Profile extends Component {
       </div>
     );
   }
+
   componentDidMount() {
     this.props.fetchProfile();
   }
+
   showData() {
     if (this.props.profile.user) {
       this.localStorageFunction();
       return (
-        <div className="container profile-container">
-          <section className="mt-4 section-profile">
-            <div className="row">
-              <div className="col-md-4 ">
-                <div>{this.mainProfile()}</div>
+        <div className="mt-3 pt-3">
+          <div className="container profile-container">
+            <section className="mt-4 section-profile">
+              <div className="row">
+                <div className="col-md-4 ">
+                  <div>
+                    {this.mainProfile()}
+                    <FollowStatus />
+                  </div>
+                </div>
+                <div className="col-md-8 mb-4" />
               </div>
-              <div className="col-md-8 mb-4" />
-            </div>
-          </section>
+            </section>
+          </div>
         </div>
       );
     }
   }
 
   render() {
-    return <div>{this.showData()}</div>;
+    return (
+      <div>
+        {this.showData()}
+
+      </div>
+    );
   }
 }
 
 Profile.propTypes = {
   fetchProfile: PropTypes.func.isRequired
 };
-export const mapStateToProp = state => {
-  return {
-    profile: state.profile
-  };
-};
+export const mapStateToProp = state => ({
+  profile: state.profile
+});
 
 export default connect(
   mapStateToProp,
