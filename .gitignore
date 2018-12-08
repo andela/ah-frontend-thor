@@ -5,7 +5,7 @@
 
 # dependencies
 /node_modules
-/__snapshots__
+__snapshots__
 # testing
 /coverage
 

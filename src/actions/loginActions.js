@@ -1,9 +1,11 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable no-self-assign */
 /* eslint-disable no-undef */
 /* eslint-disable prefer-destructuring */
 import toastr from "toastr";
 
 export const loginUrl = "https://ah-backend-thor.herokuapp.com/api/users/login/";
+
 
 function storeDataToast(username, token, url){
   toastr.success(`Logging in as ${username}!`);
