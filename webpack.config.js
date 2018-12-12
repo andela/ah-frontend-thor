@@ -1,6 +1,7 @@
 const Dotenv = require("dotenv-webpack");
 const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 
 const mode = process.NODE_ENV || "production";
 
@@ -41,7 +42,18 @@ const config = {
     new HTMLWebpackPlugin({
       template: "./src/index.html"
     }),
-    new Dotenv()
+    new Dotenv({
+      path: "./.env",
+      safe: true,
+      systemvars: true,
+      silent: true
+    }),
+    new webpack.DefinePlugin({
+      "process.env": {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        API_URL: JSON.stringify(process.env.API_URL),
+      },
+    }),
   ]
 };
 module.exports = config;

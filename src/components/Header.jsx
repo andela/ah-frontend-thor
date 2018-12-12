@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import ProfileImage from "./ProfileImage";
 
 const Header = () => (
   <header>
@@ -23,9 +24,7 @@ const Header = () => (
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
               <a className="nav-link" href="articles.html">
-                  Articles 
-                {" "}
-                <span className="sr-only" />
+                Articles <span className="sr-only" />
               </a>
             </li>
           </ul>
@@ -44,17 +43,18 @@ const Header = () => (
             </li>
             <li className="nav-item">
               <NavLink to="/login" className="navbar-brand">
-                  Login
+                Login
               </NavLink>
             </li>
             <li className="nav-item">
-              {/* <a className="nav-link" href="signup.html">Sign Up</a> */}
               <NavLink to="/signup" className="navbar-brand">
-                  Signup
+                Signup
               </NavLink>
+            </li>
+            <li>
               <NavLink to={"/Profile"} className={"navbar-brand"}>
-				        Profile
-			        </NavLink>
+                <ProfileImage />
+              </NavLink>
             </li>
           </ul>
         </div>

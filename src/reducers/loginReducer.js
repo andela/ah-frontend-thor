@@ -9,7 +9,7 @@ const loginChecker = (state, action) => {
   switch (action.type) {
   case "LOGIN":{
     if (action.payload) {
-      alert("success", null, action.payload.username, action.payload.user_token);
+      alert("success", null, action.payload.username, action.payload.user_token, "/");
       return {
         ...state,
         token: action.payload.user_token

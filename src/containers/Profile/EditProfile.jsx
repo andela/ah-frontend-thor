@@ -26,27 +26,27 @@ export class EditProfile extends Component {
         image: this.props.image
       };
       this.props.editProfile(profileData);
-      toastr.success("You have successfully uploaded your profile");
     } else {
       const profileData = {
         bio: this.state.bio,
         image: this.state.image
       };
       this.props.editProfile(profileData);
-      toastr.success("You have successfully uploaded your profile");
     }
   };
 
   uploadImage = event => {
+    this.setState({
+      image:
+        "https://res.cloudinary.com/dksxmwjqs/image/upload/v1544619488/em3oq7jnnea8bsqkets3.gif"
+    });
     const imagePreview = document.getElementById("img-preview");
+
     const file = event.target.files[0];
     const formData = new FormData();
     formData.append("file", file);
     formData.append("upload_preset", process.env.CLOUDNARY_UPLOAD_PRESET);
     this.props.saveImage(formData, imagePreview);
-    this.setState({
-      image: this.props.image
-    });
   };
 
   editDataHeading() {

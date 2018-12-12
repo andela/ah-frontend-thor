@@ -15,6 +15,7 @@ import ChangePasswordPage from "../containers/resetPassword/ChangePasswordContai
 
 import Profile from "../containers/Profile/Profile";
 import EditProfile from "../containers/Profile/EditProfile";
+import "../assets/css/styles.css";
 const AppRouter = () => (
   <Provider store={store}>
     <Router>
