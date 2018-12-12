@@ -8,12 +8,20 @@ const initialUserState = {
   token: null
 };
 
+let data;
+
 const social = (state = initialUserState, action) => {
   switch (action.type) {
   case SOCIAL_LOGIN:{
     const { token, user } = action.payload;
-    alert("success", null, user, token, "/");
-    return { user: user, isLoggedIn: true, token: token };
+    if (token){
+      data = { user: user.username, isLoggedIn: true, token: token };
+      alert("success", null, data.user, data.token, "/");
+    }else{
+      data = { user: user.username, isLoggedIn: true, token: user.token };
+      alert("success", null, data.user, data.token, "/");
+    }
+    return data;
   }
   default:
     return state;

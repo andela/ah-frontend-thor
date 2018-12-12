@@ -46,7 +46,10 @@ textarea.form-control.no-border {
   box-shadow: none !important;
 }
 .in-font {
-  font-size: 40px;
+  font-size: 30px;
+}
+.in-fontt {
+  font-size: 20px;
 }
 .fb {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,

@@ -7,3 +7,5 @@ export const EDIT_PROFILE = "EDIT_PROFILE";
 export const SAVE_IMAGE = "SAVE_IMAGE";
 export const SOCIAL_LOGIN = "SOCIAL_LOGIN";
 export const LOGIN = "LOGIN";
+export const POST_ARTICLE = "POST_ARTICLE";
+export const IMAGE_URL = "IMAGE_URL";

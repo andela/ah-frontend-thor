@@ -5,10 +5,12 @@ import signUpReducer from "./signUpReducer";
 import profileReducer from "./profileReducer";
 import loginReducer from "./loginReducer";
 import social from "./socialReducer";
+import articleReducer from "./articleReducer";
 
 export default combineReducers({
   signUpReducer,
   auth: loginReducer,
   profile: profileReducer,
   social,
+  articleReducer
 });

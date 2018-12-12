@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { NavLink } from "react-router-dom";
 import ProfileImage from "./ProfileImage";
@@ -23,9 +24,9 @@ const Header = () => (
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <a className="nav-link" href="articles.html">
-                Articles <span className="sr-only" />
-              </a>
+              <NavLink to="/post_article" className="navbar-brand">
+                create Article
+              </NavLink>
             </li>
           </ul>
           <ul className="navbar-nav ml-auto">
@@ -52,7 +53,7 @@ const Header = () => (
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/Profile"} className={"navbar-brand"}>
+              <NavLink to="/Profile" className="navbar-brand">
                 <ProfileImage />
               </NavLink>
             </li>

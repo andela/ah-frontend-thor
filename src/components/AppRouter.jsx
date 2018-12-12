@@ -16,6 +16,8 @@ import ChangePasswordPage from "../containers/resetPassword/ChangePasswordContai
 import Profile from "../containers/Profile/Profile";
 import EditProfile from "../containers/Profile/EditProfile";
 import "../assets/css/styles.css";
+import PostArticle from "./article/PostArticle";
+
 const AppRouter = () => (
   <Provider store={store}>
     <Router>
@@ -30,6 +32,7 @@ const AppRouter = () => (
             <Route path="/update_password" component={ChangePasswordPage} />
             <Route path="/profile" component={Profile} />
             <Route path="/editprofile" component={EditProfile} />
+            <Route path="/post_article" component={PostArticle} />
           </div>
         </Root>
       </React.Fragment>

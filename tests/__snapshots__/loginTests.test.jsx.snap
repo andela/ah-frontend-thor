@@ -1263,15 +1263,14 @@ ShallowWrapper {
               <li
                 className="nav-item"
               >
-                <a
-                  className="nav-link"
-                  href="articles.html"
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="navbar-brand"
+                  to="/post_article"
                 >
-                  Articles 
-                  <span
-                    className="sr-only"
-                  />
-                </a>
+                  create Article
+                </NavLink>
               </li>
             </ul>
             <ul
@@ -1374,15 +1373,14 @@ ShallowWrapper {
               <li
                 className="nav-item"
               >
-                <a
-                  className="nav-link"
-                  href="articles.html"
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="navbar-brand"
+                  to="/post_article"
                 >
-                  Articles 
-                  <span
-                    className="sr-only"
-                  />
-                </a>
+                  create Article
+                </NavLink>
               </li>
             </ul>
             <ul
@@ -1483,15 +1481,14 @@ ShallowWrapper {
                 <li
                   className="nav-item"
                 >
-                  <a
-                    className="nav-link"
-                    href="articles.html"
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="navbar-brand"
+                    to="/post_article"
                   >
-                    Articles 
-                    <span
-                      className="sr-only"
-                    />
-                  </a>
+                    create Article
+                  </NavLink>
                 </li>
               </ul>
               <ul
@@ -1623,15 +1620,14 @@ ShallowWrapper {
                   <li
                     className="nav-item"
                   >
-                    <a
-                      className="nav-link"
-                      href="articles.html"
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      className="navbar-brand"
+                      to="/post_article"
                     >
-                      Articles 
-                      <span
-                        className="sr-only"
-                      />
-                    </a>
+                      create Article
+                    </NavLink>
                   </li>
                 </ul>,
                 <ul
@@ -1704,15 +1700,14 @@ ShallowWrapper {
                   "children": <li
                     className="nav-item"
                   >
-                    <a
-                      className="nav-link"
-                      href="articles.html"
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      className="navbar-brand"
+                      to="/post_article"
                     >
-                      Articles 
-                      <span
-                        className="sr-only"
-                      />
-                    </a>
+                      create Article
+                    </NavLink>
                   </li>,
                   "className": "navbar-nav mr-auto",
                 },
@@ -1722,48 +1717,31 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <a
-                      className="nav-link"
-                      href="articles.html"
+                    "children": <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      className="navbar-brand"
+                      to="/post_article"
                     >
-                      Articles 
-                      <span
-                        className="sr-only"
-                      />
-                    </a>,
+                      create Article
+                    </NavLink>,
                     "className": "nav-item",
                   },
                   "ref": null,
                   "rendered": Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "host",
+                    "nodeType": "function",
                     "props": Object {
-                      "children": Array [
-                        "Articles ",
-                        <span
-                          className="sr-only"
-                        />,
-                      ],
-                      "className": "nav-link",
-                      "href": "articles.html",
+                      "activeClassName": "active",
+                      "aria-current": "page",
+                      "children": "create Article",
+                      "className": "navbar-brand",
+                      "to": "/post_article",
                     },
                     "ref": null,
-                    "rendered": Array [
-                      "Articles ",
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "className": "sr-only",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "span",
-                      },
-                    ],
-                    "type": "a",
+                    "rendered": "create Article",
+                    "type": [Function],
                   },
                   "type": "li",
                 },
@@ -2068,15 +2046,14 @@ ShallowWrapper {
                 <li
                   className="nav-item"
                 >
-                  <a
-                    className="nav-link"
-                    href="articles.html"
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="navbar-brand"
+                    to="/post_article"
                   >
-                    Articles 
-                    <span
-                      className="sr-only"
-                    />
-                  </a>
+                    create Article
+                  </NavLink>
                 </li>
               </ul>
               <ul
@@ -2179,15 +2156,14 @@ ShallowWrapper {
                 <li
                   className="nav-item"
                 >
-                  <a
-                    className="nav-link"
-                    href="articles.html"
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="navbar-brand"
+                    to="/post_article"
                   >
-                    Articles 
-                    <span
-                      className="sr-only"
-                    />
-                  </a>
+                    create Article
+                  </NavLink>
                 </li>
               </ul>
               <ul
@@ -2288,15 +2264,14 @@ ShallowWrapper {
                   <li
                     className="nav-item"
                   >
-                    <a
-                      className="nav-link"
-                      href="articles.html"
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      className="navbar-brand"
+                      to="/post_article"
                     >
-                      Articles 
-                      <span
-                        className="sr-only"
-                      />
-                    </a>
+                      create Article
+                    </NavLink>
                   </li>
                 </ul>
                 <ul
@@ -2428,15 +2403,14 @@ ShallowWrapper {
                     <li
                       className="nav-item"
                     >
-                      <a
-                        className="nav-link"
-                        href="articles.html"
+                      <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="navbar-brand"
+                        to="/post_article"
                       >
-                        Articles 
-                        <span
-                          className="sr-only"
-                        />
-                      </a>
+                        create Article
+                      </NavLink>
                     </li>
                   </ul>,
                   <ul
@@ -2509,15 +2483,14 @@ ShallowWrapper {
                     "children": <li
                       className="nav-item"
                     >
-                      <a
-                        className="nav-link"
-                        href="articles.html"
+                      <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="navbar-brand"
+                        to="/post_article"
                       >
-                        Articles 
-                        <span
-                          className="sr-only"
-                        />
-                      </a>
+                        create Article
+                      </NavLink>
                     </li>,
                     "className": "navbar-nav mr-auto",
                   },
@@ -2527,48 +2500,31 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": <a
-                        className="nav-link"
-                        href="articles.html"
+                      "children": <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="navbar-brand"
+                        to="/post_article"
                       >
-                        Articles 
-                        <span
-                          className="sr-only"
-                        />
-                      </a>,
+                        create Article
+                      </NavLink>,
                       "className": "nav-item",
                     },
                     "ref": null,
                     "rendered": Object {
                       "instance": null,
                       "key": undefined,
-                      "nodeType": "host",
+                      "nodeType": "function",
                       "props": Object {
-                        "children": Array [
-                          "Articles ",
-                          <span
-                            className="sr-only"
-                          />,
-                        ],
-                        "className": "nav-link",
-                        "href": "articles.html",
+                        "activeClassName": "active",
+                        "aria-current": "page",
+                        "children": "create Article",
+                        "className": "navbar-brand",
+                        "to": "/post_article",
                       },
                       "ref": null,
-                      "rendered": Array [
-                        "Articles ",
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "host",
-                          "props": Object {
-                            "className": "sr-only",
-                          },
-                          "ref": null,
-                          "rendered": null,
-                          "type": "span",
-                        },
-                      ],
-                      "type": "a",
+                      "rendered": "create Article",
+                      "type": [Function],
                     },
                     "type": "li",
                   },
