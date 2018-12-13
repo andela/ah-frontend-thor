@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { fetchProfile } from "../../actions/profileAction";
 import { Link } from "react-router-dom";
+import PublishedArticles from "./PublishedArticles"
 
 export class Profile extends Component {
   localStorageFunction() {
@@ -68,15 +69,17 @@ export class Profile extends Component {
     if (this.props.profile.user) {
       this.localStorageFunction();
       return (
+        <div className="mt-3 pt-3">
         <div className="container profile-container">
           <section className="mt-4 section-profile">
             <div className="row">
-              <div className="col-md-4 ">
+              <div className="col-md-4 mb-4">
                 <div>{this.mainProfile()}</div>
               </div>
-              <div className="col-md-8 mb-4" />
+              <PublishedArticles />
             </div>
           </section>
+        </div>
         </div>
       );
     }

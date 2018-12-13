@@ -78,6 +78,10 @@ ShallowWrapper {
                 component={[Function]}
                 path="/bookmarkslist"
               />
+              <Route
+                component={[Function]}
+                path="/edit_article/:id"
+              />
             </div>
           </Root>
         </React.Fragment>
@@ -156,6 +160,10 @@ ShallowWrapper {
                 component={[Function]}
                 path="/bookmarkslist"
               />
+              <Route
+                component={[Function]}
+                path="/edit_article/:id"
+              />
             </div>
           </Root>
         </React.Fragment>,
@@ -225,6 +233,10 @@ ShallowWrapper {
                 component={[Function]}
                 path="/bookmarkslist"
               />
+              <Route
+                component={[Function]}
+                path="/edit_article/:id"
+              />
             </div>
           </Root>,
         },
@@ -292,6 +304,10 @@ ShallowWrapper {
                 component={[Function]}
                 path="/bookmarkslist"
               />
+              <Route
+                component={[Function]}
+                path="/edit_article/:id"
+              />
             </div>,
           },
           "ref": null,
@@ -357,6 +373,10 @@ ShallowWrapper {
                 <Route
                   component={[Function]}
                   path="/bookmarkslist"
+                />,
+                <Route
+                  component={[Function]}
+                  path="/edit_article/:id"
                 />,
               ],
             },
@@ -531,6 +551,18 @@ ShallowWrapper {
                 "rendered": null,
                 "type": [Function],
               },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "path": "/edit_article/:id",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
             ],
             "type": "div",
           },
@@ -608,6 +640,10 @@ ShallowWrapper {
                 <Route
                   component={[Function]}
                   path="/bookmarkslist"
+                />
+                <Route
+                  component={[Function]}
+                  path="/edit_article/:id"
                 />
               </div>
             </Root>
@@ -687,6 +723,10 @@ ShallowWrapper {
                   component={[Function]}
                   path="/bookmarkslist"
                 />
+                <Route
+                  component={[Function]}
+                  path="/edit_article/:id"
+                />
               </div>
             </Root>
           </React.Fragment>,
@@ -756,6 +796,10 @@ ShallowWrapper {
                   component={[Function]}
                   path="/bookmarkslist"
                 />
+                <Route
+                  component={[Function]}
+                  path="/edit_article/:id"
+                />
               </div>
             </Root>,
           },
@@ -823,6 +867,10 @@ ShallowWrapper {
                   component={[Function]}
                   path="/bookmarkslist"
                 />
+                <Route
+                  component={[Function]}
+                  path="/edit_article/:id"
+                />
               </div>,
             },
             "ref": null,
@@ -888,6 +936,10 @@ ShallowWrapper {
                   <Route
                     component={[Function]}
                     path="/bookmarkslist"
+                  />,
+                  <Route
+                    component={[Function]}
+                    path="/edit_article/:id"
                   />,
                 ],
               },
@@ -1057,6 +1109,18 @@ ShallowWrapper {
                   "props": Object {
                     "component": [Function],
                     "path": "/bookmarkslist",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "component": [Function],
+                    "path": "/edit_article/:id",
                   },
                   "ref": null,
                   "rendered": null,

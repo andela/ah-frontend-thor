@@ -215,4 +215,8 @@ textarea.form-control.no-border {
   position: relative;
   bottom: 0px;
 }
+.profile-card-image{
+  width:15%;
+}
+
 /*End of Footer */

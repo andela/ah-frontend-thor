@@ -5,12 +5,12 @@ import signUpReducer from "./signUpReducer";
 import profileReducer from "./profileReducer";
 import loginReducer from "./loginReducer";
 import social from "./socialReducer";
-import articleReducer from "./articleReducer";
 import userVerifiedReducer from "./emailVerification";
 import getAllArticlesReducer from "./articlesReducer";
 import singleArticleReducer from "./singleArticleReducer";
 import searchReducer from "./searchReducer";
 import listReducer from "./bookmarksReducer";
+import {updateArticleReducer, articleReducer} from "./articleReducer";
 
 export default combineReducers({
   signUpReducer,
@@ -22,5 +22,6 @@ export default combineReducers({
   articles: getAllArticlesReducer,
   article: singleArticleReducer,
   search: searchReducer,
-  listReducer
+  listReducer,
+  updateArticleReducer
 });

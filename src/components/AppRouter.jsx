@@ -45,6 +45,7 @@ const AppRouter = () => (
               component={SearchResults}
             />
             <Route path="/bookmarkslist" component={Bookmarks} />
+            <Route path="/edit_article/:id" component={PostArticle} />
           </div>
         </Root>
       </React.Fragment>

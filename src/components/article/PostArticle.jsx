@@ -5,7 +5,8 @@ import propTypes from "prop-types";
 import TagsInput from "react-tagsinput";
 import "react-tagsinput/react-tagsinput.css";
 
-import createArticles from "../../actions/articleActions";
+import {createArticles, updateArticle, getArticleById} from "../../actions/articleActions";
+
 
 class PostArticle extends Component {
   state = {
@@ -17,6 +18,36 @@ class PostArticle extends Component {
     tags: []
   };
 
+  componentWillMount(){
+    
+    if(this.props.match.params.id!==undefined){
+      const { getArticleById } = this.props;
+      getArticleById(this.props.match.params.id);
+    }
+    
+  }
+
+  componentWillReceiveProps(nextProps){
+    if(this.props.match.params.id!==undefined){
+      const {
+        title,
+        image_url,
+        description,
+        body,
+        audio_url,
+        tag_list
+      } = nextProps.articles;
+      this.setState({
+        title: title,
+        imageUrl: image_url,
+        description: description,
+        body: body,
+        audioUrl: audio_url,
+        tags: tag_list
+      });
+    }
+  }
+
   onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
@@ -27,27 +58,34 @@ class PostArticle extends Component {
 
   onSubmit = e => {
     e.preventDefault();
+    if(this.props.match.params.id===undefined){
 
-    const { createArticles } = this.props;
+      const { createArticles } = this.props;
 
-    const {
-      title,
-      imageUrl,
-      description,
-      body,
-      audioUrl,
-      tags
-    } = this.state;
+      const { title, imageUrl, description, body, audioUrl, tags } = this.state;
+      const article = {
+        title: title,
+        body: body,
+        image_url: imageUrl,
+        description: description,
+        audio_url: audioUrl,
+        tag_list: tags
+      };
+      createArticles(article);
+    }else{
+      const { updateArticle } = this.props;
+      const { title, imageUrl, description, body, audioUrl, tags } = this.state;
 
-    const article = {
-      title: title,
-      body: body,
-      image_url: imageUrl,
-      description: description,
-      audio_url: audioUrl,
-      tag_list: tags
-    };
-    createArticles(article);
+      const article = {
+        title: title,
+        body: body,
+        image_url: imageUrl,
+        description: description,
+        audio_url: audioUrl,
+        tag_list: tags
+      };
+      updateArticle(article, this.props.match.params.id);
+    }
   };
 
   handleOnClick = () => {
@@ -134,14 +172,23 @@ class PostArticle extends Component {
     );
   }
 }
+
+export const mapStateToProps = ({ articleReducer }) => ({
+  articles: articleReducer.articles
+});
+
 export const mapDispatchToProps = dispatch => ({
-  createArticles: (article) => dispatch(createArticles(article))
+  createArticles: (article) => dispatch(createArticles(article)),
+  updateArticle: (article, id) => dispatch(updateArticle(article, id)),
+  getArticleById: id => dispatch(getArticleById(id))
 });
 
 PostArticle.propTypes = {
   createArticles: propTypes.func.isRequired
 };
 
+export { PostArticle };
+
 export default connect(
-  null, mapDispatchToProps
+  mapStateToProps, mapDispatchToProps
 )(PostArticle);
