@@ -1,5 +1,5 @@
-import {articleReducer, updateArticleReducer} from "../../src/reducers/articleReducer";
-import { POST_ARTICLE, UPDATE_ARTICLE, UPDATE_FAIL, PROFILE_ARTICLES, GET_ARTICLE_BY_ID } from "../../src/actions/types";
+import {articleReducer, updateArticleReducer, deleteArticleReducer} from "../../src/reducers/articleReducer";
+import { POST_ARTICLE, UPDATE_ARTICLE, UPDATE_FAIL, PROFILE_ARTICLES, GET_ARTICLE_BY_ID, DELETE_FAIL, DELETE_ARTICLE } from "../../src/actions/types";
 
 describe("articleReducer", () => {
   it("has a default state", () => {
@@ -58,5 +58,31 @@ describe("articleReducer", () => {
     ).toEqual(
       {article: {}, articles: {article: {}}}
     );
+  });
+});
+
+describe("deleteArticleReducer", () => {
+  it("has a default state", () => {
+    expect(articleReducer(undefined, { type: "unexpected" })).toEqual({
+      article: {},
+      articles: []
+    });
+  });
+
+  it("should update state on POST_ARTICLE action type", () => {
+    expect(
+      deleteArticleReducer(undefined, {
+        type: DELETE_FAIL,
+        payload: { article: {}}
+      })
+    ).toEqual( {article: {article: {}}, articles: []});
+  });
+  it("should update state on POST_ARTICLE action type", () => {
+    expect(
+      deleteArticleReducer(undefined, {
+        type: DELETE_ARTICLE,
+        payload: { article: {}}
+      })
+    ).toEqual( {article: {article: {}}, articles: []});
   });
 });

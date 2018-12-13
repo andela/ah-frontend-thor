@@ -1,16 +1,20 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 
-import { getAuthorArticles } from "../../actions/articleActions";
+import { getAuthorArticles, deleteArticle } from "../../actions/articleActions";
 
 class PublishedArticles extends Component {
   componentWillMount() {
-    this.props.getAuthorArticles();
+    const { getAuthorArticles } = this.props;
+    getAuthorArticles();
   }
 
+  onClick = (id) =>{
+    const { deleteArticle } = this.props;
+    deleteArticle(id);
+  }
+  
   publishedArticleHelper = (imageUrl, title, description, id) => {
-    
     const data = (
       <li className="media">
         <img
@@ -28,6 +32,15 @@ class PublishedArticles extends Component {
         >
           Edit
         </a>
+
+        <button
+          className="btn btn-danger btn-md pull-right"
+          type="submit"
+          id="deleteArticle"
+          onClick={(e) => this.onClick(id)}
+        >
+          Delete
+        </button>
       </li>
     );
     return data;
@@ -50,10 +63,11 @@ class PublishedArticles extends Component {
   }
 }
 const mapStateToProps = ({ articleReducer }) => ({
-  articles: articleReducer.articles,
+  articles: articleReducer.articles
 });
 const mapActionsToProps = dispatch => ({
-  getAuthorArticles: () => dispatch(getAuthorArticles())
+  getAuthorArticles: () => dispatch(getAuthorArticles()),
+  deleteArticle: (id) => dispatch(deleteArticle(id))
 });
 export default connect(
   mapStateToProps,

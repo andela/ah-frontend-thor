@@ -10,7 +10,7 @@ import getAllArticlesReducer from "./articlesReducer";
 import singleArticleReducer from "./singleArticleReducer";
 import searchReducer from "./searchReducer";
 import listReducer from "./bookmarksReducer";
-import {updateArticleReducer, articleReducer} from "./articleReducer";
+import {updateArticleReducer, articleReducer, deleteArticleReducer} from "./articleReducer";
 
 export default combineReducers({
   signUpReducer,
@@ -23,5 +23,6 @@ export default combineReducers({
   article: singleArticleReducer,
   search: searchReducer,
   listReducer,
-  updateArticleReducer
+  updateArticleReducer,
+  deleteArticleReducer
 });

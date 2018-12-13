@@ -7,7 +7,8 @@ import {
   createArticles,
   getAuthorArticles,
   getArticleById,
-  updateArticle
+  updateArticle,
+  deleteArticle
 } from "../../src/actions/articleActions";
 
 import {
@@ -15,10 +16,12 @@ import {
   PROFILE_ARTICLES,
   GET_ARTICLE_BY_ID,
   UPDATE_FAIL,
-  UPDATE_ARTICLE
+  UPDATE_ARTICLE,
+  DELETE_ARTICLE,
+  DELETE_FAIL
 } from "../../src/actions/types";
 
-describe("post article action creators", () => {
+describe("Article action creators", () => {
   localStorage.setItem("token", "token");
   const middlewares = [thunk];
   const mockStore = configureStore(middlewares);
@@ -32,7 +35,7 @@ describe("post article action creators", () => {
     fetchMock.restore();
   });
 
-  it("authenticate user", () => {
+  it("post article action", () => {
     const data = { article: {} };
     // eslint-disable-next-line no-undef
     fetchMock.post("https://ah-backend-thor.herokuapp.com/api/articles/", data);
@@ -45,7 +48,7 @@ describe("post article action creators", () => {
   
 });
 
-describe("author articles action creators", () => {
+describe("Article action creators", () => {
   localStorage.setItem("token", "token");
   const middlewares = [thunk];
   const mockStore = configureStore(middlewares);
@@ -77,7 +80,7 @@ describe("author articles action creators", () => {
   });
 });
 
-describe("fetch single article action creators", () => {
+describe("Article action creators", () => {
   localStorage.setItem("token", "token");
   const middlewares = [thunk];
   const mockStore = configureStore(middlewares);
@@ -105,7 +108,7 @@ describe("fetch single article action creators", () => {
     });
   });
 });
-describe("update article action creators", () => {
+describe("Article action creators", () => {
   localStorage.setItem("token", "token");
   const middlewares = [thunk];
   const mockStore = configureStore(middlewares);
@@ -119,7 +122,7 @@ describe("update article action creators", () => {
     fetchMock.restore();
   });
 
-  it("should update article", () => {
+  it("update article action", () => {
     const id = 2;
     const data = { article: {} };
     const token = "someToken";
@@ -140,7 +143,7 @@ describe("update article action creators", () => {
   });
 });
 
-describe("update article action creators", () => {
+describe("Article action creators", () => {
   localStorage.setItem("token", "token");
   const middlewares = [thunk];
   const mockStore = configureStore(middlewares);
@@ -154,7 +157,7 @@ describe("update article action creators", () => {
     fetchMock.restore();
   });
 
-  it("should not update article", () => {
+  it("update fail action", () => {
     const id = 2;
     const data = { article: {} };
     const token = "someToken";
@@ -173,4 +176,75 @@ describe("update article action creators", () => {
       expect(store.getActions()).toEqual([]);
     });
   });
+});
+describe("Article action creators", () => {
+  localStorage.setItem("token", "token");
+  const middlewares = [thunk];
+  const mockStore = configureStore(middlewares);
+  const initialUserState = {
+    articles: [],
+    article: {}
+  };
+  const store = mockStore({ ...initialUserState });
+  afterEach(() => {
+    // eslint-disable-next-line no-undef
+    fetchMock.restore();
+  });
+
+  it("Delete fail Action", () => {
+    const id = 2;
+    const data = { article: {} };
+    const token = "someToken";
+    localStorage.setItem("token", token);
+    // eslint-disable-next-line no-undef
+    fetchMock.deleteOnce(`https://ah-backend-thor.herokuapp.com/api/articles/${id}`, {
+      status: 400,
+      headers: {
+        "content-type": "application/json",
+        Authorization: `Token ${token}`
+      },
+      body:{}
+    });
+    const expectedActions = [{ type: DELETE_FAIL, payload: data }];
+    return store.dispatch(deleteArticle(2)).then(() => {
+      expect(store.getActions()).toEqual([]);
+    });
+  });
+  
+});
+
+describe("Article action creators", () => {
+  localStorage.setItem("token", "token");
+  const middlewares = [thunk];
+  const mockStore = configureStore(middlewares);
+  const initialUserState = {
+    articles: [],
+    article: {}
+  };
+  const store = mockStore({ ...initialUserState });
+  afterEach(() => {
+    // eslint-disable-next-line no-undef
+    fetchMock.restore();
+  });
+
+  it("Delete article action", () => {
+    const id = 2;
+    const data = { article: {} };
+    const token = "someToken";
+    localStorage.setItem("token", token);
+    // eslint-disable-next-line no-undef
+    fetchMock.deleteOnce(`https://ah-backend-thor.herokuapp.com/api/articles/${id}`, {
+      status: 204,
+      headers: {
+        "content-type": "application/json",
+        Authorization: `Token ${token}`
+      },
+      body:{}
+    });
+    const expectedActions = [{ type: DELETE_ARTICLE, payload: data }];
+    return store.dispatch(deleteArticle(2)).then(() => {
+      expect(store.getActions()).toEqual([]);
+    });
+  });
+  
 });
