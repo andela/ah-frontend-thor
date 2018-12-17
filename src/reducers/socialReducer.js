@@ -8,6 +8,7 @@ const initialUserState = {
   token: null
 };
 
+
 let data;
 
 const social = (state = initialUserState, action) => {
