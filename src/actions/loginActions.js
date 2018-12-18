@@ -4,6 +4,7 @@
 import toastr from "toastr";
 
 export const loginUrl = "https://ah-backend-thor.herokuapp.com/api/users/login/";
+// export const loginUrl = "http://localhost:8000/api/users/login/";
 
 export const alert=(type,errorMsg,username, token, url)=>{
   if(type === "error" || "success"  && !username && !token){

@@ -11,6 +11,7 @@ import getAllArticlesReducer from "./articlesReducer";
 import singleArticleReducer from "./singleArticleReducer";
 import searchReducer from "./searchReducer";
 import listReducer from "./bookmarksReducer";
+import likeReducer from "./articleLikesReducer";
 
 export default combineReducers({
   signUpReducer,
@@ -22,5 +23,6 @@ export default combineReducers({
   articles: getAllArticlesReducer,
   article: singleArticleReducer,
   search: searchReducer,
-  listReducer
+  listReducer,
+  likeReducer
 });
