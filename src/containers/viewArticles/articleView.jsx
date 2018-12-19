@@ -36,13 +36,30 @@ export const SocialMediaSection = () => (
   </div>
 );
 
+export const TagSection = tags => {
+  const tagValues = tags.tags.map((tag, index) => (
+    <span className="badge badge-pill badge-info tags" key={index}>
+      {tag}
+    </span>
+  ));
+  return (
+    <div>
+      <p>
+        Tags:
+        {tagValues}
+      </p>
+    </div>
+  );
+};
+
 export const ArticleSection = ({
   img,
   description,
   body,
   author,
   publishDate,
-  readTime
+  readTime,
+  tags
 }) => (
   <div className="col-md-6 mb-4">
     {/* <!--Featured Image--> */}
@@ -58,23 +75,17 @@ export const ArticleSection = ({
         <p className="h5 my-4">{description}</p>
         <p>{body}</p>
         <p className="publish__date">
-          Published on:
+            Published on:
           <Moment format="YYYY/MM/DD">{publishDate}</Moment>
         </p>
         <p>
-      By:
+            By:
           {author}
         </p>
       </div>
 
       <hr />
-      <p>
-        Tags:
-        <span className="badge badge-pill badge-info">Science</span>
-        <span className="badge badge-pill badge-info">Adventure</span>
-        <span className="badge badge-pill badge-info">Experiment</span>
-        <span className="badge badge-pill badge-info">Andela</span>
-      </p>
+      <TagSection tags={tags} />
     </div>
   </div>
 );
@@ -84,6 +95,13 @@ export class SingleArticle extends Component {
     const id = localStorage.getItem("articleId");
     this.props.singleArticleAction(id);
   }
+
+  state = {
+    tags:
+      JSON.parse(localStorage.getItem("tags")) == null
+        ? [""]
+        : JSON.parse(localStorage.getItem("tags"))
+  };
 
   render() {
     const article = this.props.Article.article;
@@ -103,6 +121,7 @@ export class SingleArticle extends Component {
                   publishDate={article.created_at}
                   author={author}
                   readTime={article.read_time}
+                  tags={this.state.tags}
                 />
               </div>
             </section>
