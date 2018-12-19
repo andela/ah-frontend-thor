@@ -1,8 +1,12 @@
 import React from "react";
+import  AllArticles,{
+  HomeHeaderSection
+} from "../containers/viewArticles/articlesView";
 
 const Home = () => (
-  <div className="container">
-    This is Home!  
+  <div>
+    <HomeHeaderSection />
+    <AllArticles />
   </div>
 );
 export default Home;

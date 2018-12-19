@@ -256,8 +256,22 @@ ShallowWrapper {
 `;
 
 exports[`<Content /> tests the footer of the app against the snapshot 1`] = `
-ReactWrapper {
-  Symbol(enzyme.__unrendered__): <Home />,
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Provider
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <Home />
+  </Provider>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -266,31 +280,13 @@ ReactWrapper {
     "simulateEvent": [Function],
     "unmount": [Function],
   },
-  Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
     "nodeType": "function",
     "props": Object {},
     "ref": null,
-    "rendered": Object {
-      "instance": <div
-        class="container"
-      >
-        This is Home!
-      </div>,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": "This is Home!",
-        "className": "container",
-      },
-      "ref": null,
-      "rendered": Array [
-        "This is Home!",
-      ],
-      "type": "div",
-    },
+    "rendered": null,
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
@@ -300,24 +296,7 @@ ReactWrapper {
       "nodeType": "function",
       "props": Object {},
       "ref": null,
-      "rendered": Object {
-        "instance": <div
-          class="container"
-        >
-          This is Home!
-        </div>,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "This is Home!",
-          "className": "container",
-        },
-        "ref": null,
-        "rendered": Array [
-          "This is Home!",
-        ],
-        "type": "div",
-      },
+      "rendered": null,
       "type": [Function],
     },
   ],

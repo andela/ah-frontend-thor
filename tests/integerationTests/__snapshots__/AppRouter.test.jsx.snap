@@ -54,6 +54,26 @@ ShallowWrapper {
                 component={[Function]}
                 path="/editprofile"
               />
+              <Route
+                component={[Function]}
+                path="/signout"
+              />
+              <Route
+                component={[Function]}
+                path="/post_article"
+              />
+              <Route
+                component={[Function]}
+                path="/updateuser"
+              />
+              <Route
+                component={[Function]}
+                path="/article"
+              />
+              <Route
+                component={[Function]}
+                path="/searchresults/:type/:searchData"
+              />
             </div>
           </Root>
         </React.Fragment>
@@ -108,6 +128,26 @@ ShallowWrapper {
                 component={[Function]}
                 path="/editprofile"
               />
+              <Route
+                component={[Function]}
+                path="/signout"
+              />
+              <Route
+                component={[Function]}
+                path="/post_article"
+              />
+              <Route
+                component={[Function]}
+                path="/updateuser"
+              />
+              <Route
+                component={[Function]}
+                path="/article"
+              />
+              <Route
+                component={[Function]}
+                path="/searchresults/:type/:searchData"
+              />
             </div>
           </Root>
         </React.Fragment>,
@@ -153,6 +193,26 @@ ShallowWrapper {
                 component={[Function]}
                 path="/editprofile"
               />
+              <Route
+                component={[Function]}
+                path="/signout"
+              />
+              <Route
+                component={[Function]}
+                path="/post_article"
+              />
+              <Route
+                component={[Function]}
+                path="/updateuser"
+              />
+              <Route
+                component={[Function]}
+                path="/article"
+              />
+              <Route
+                component={[Function]}
+                path="/searchresults/:type/:searchData"
+              />
             </div>
           </Root>,
         },
@@ -196,6 +256,26 @@ ShallowWrapper {
                 component={[Function]}
                 path="/editprofile"
               />
+              <Route
+                component={[Function]}
+                path="/signout"
+              />
+              <Route
+                component={[Function]}
+                path="/post_article"
+              />
+              <Route
+                component={[Function]}
+                path="/updateuser"
+              />
+              <Route
+                component={[Function]}
+                path="/article"
+              />
+              <Route
+                component={[Function]}
+                path="/searchresults/:type/:searchData"
+              />
             </div>,
           },
           "ref": null,
@@ -237,6 +317,26 @@ ShallowWrapper {
                 <Route
                   component={[Function]}
                   path="/editprofile"
+                />,
+                <Route
+                  component={[Function]}
+                  path="/signout"
+                />,
+                <Route
+                  component={[Function]}
+                  path="/post_article"
+                />,
+                <Route
+                  component={[Function]}
+                  path="/updateuser"
+                />,
+                <Route
+                  component={[Function]}
+                  path="/article"
+                />,
+                <Route
+                  component={[Function]}
+                  path="/searchresults/:type/:searchData"
                 />,
               ],
             },
@@ -339,6 +439,66 @@ ShallowWrapper {
                 "rendered": null,
                 "type": [Function],
               },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "path": "/signout",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "path": "/post_article",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "path": "/updateuser",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "path": "/article",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "path": "/searchresults/:type/:searchData",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
             ],
             "type": "div",
           },
@@ -392,6 +552,26 @@ ShallowWrapper {
                 <Route
                   component={[Function]}
                   path="/editprofile"
+                />
+                <Route
+                  component={[Function]}
+                  path="/signout"
+                />
+                <Route
+                  component={[Function]}
+                  path="/post_article"
+                />
+                <Route
+                  component={[Function]}
+                  path="/updateuser"
+                />
+                <Route
+                  component={[Function]}
+                  path="/article"
+                />
+                <Route
+                  component={[Function]}
+                  path="/searchresults/:type/:searchData"
                 />
               </div>
             </Root>
@@ -447,6 +627,26 @@ ShallowWrapper {
                   component={[Function]}
                   path="/editprofile"
                 />
+                <Route
+                  component={[Function]}
+                  path="/signout"
+                />
+                <Route
+                  component={[Function]}
+                  path="/post_article"
+                />
+                <Route
+                  component={[Function]}
+                  path="/updateuser"
+                />
+                <Route
+                  component={[Function]}
+                  path="/article"
+                />
+                <Route
+                  component={[Function]}
+                  path="/searchresults/:type/:searchData"
+                />
               </div>
             </Root>
           </React.Fragment>,
@@ -492,6 +692,26 @@ ShallowWrapper {
                   component={[Function]}
                   path="/editprofile"
                 />
+                <Route
+                  component={[Function]}
+                  path="/signout"
+                />
+                <Route
+                  component={[Function]}
+                  path="/post_article"
+                />
+                <Route
+                  component={[Function]}
+                  path="/updateuser"
+                />
+                <Route
+                  component={[Function]}
+                  path="/article"
+                />
+                <Route
+                  component={[Function]}
+                  path="/searchresults/:type/:searchData"
+                />
               </div>
             </Root>,
           },
@@ -535,6 +755,26 @@ ShallowWrapper {
                   component={[Function]}
                   path="/editprofile"
                 />
+                <Route
+                  component={[Function]}
+                  path="/signout"
+                />
+                <Route
+                  component={[Function]}
+                  path="/post_article"
+                />
+                <Route
+                  component={[Function]}
+                  path="/updateuser"
+                />
+                <Route
+                  component={[Function]}
+                  path="/article"
+                />
+                <Route
+                  component={[Function]}
+                  path="/searchresults/:type/:searchData"
+                />
               </div>,
             },
             "ref": null,
@@ -576,6 +816,26 @@ ShallowWrapper {
                   <Route
                     component={[Function]}
                     path="/editprofile"
+                  />,
+                  <Route
+                    component={[Function]}
+                    path="/signout"
+                  />,
+                  <Route
+                    component={[Function]}
+                    path="/post_article"
+                  />,
+                  <Route
+                    component={[Function]}
+                    path="/updateuser"
+                  />,
+                  <Route
+                    component={[Function]}
+                    path="/article"
+                  />,
+                  <Route
+                    component={[Function]}
+                    path="/searchresults/:type/:searchData"
                   />,
                 ],
               },
@@ -673,6 +933,66 @@ ShallowWrapper {
                   "props": Object {
                     "component": [Function],
                     "path": "/editprofile",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "component": [Function],
+                    "path": "/signout",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "component": [Function],
+                    "path": "/post_article",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "component": [Function],
+                    "path": "/updateuser",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "component": [Function],
+                    "path": "/article",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "component": [Function],
+                    "path": "/searchresults/:type/:searchData",
                   },
                   "ref": null,
                   "rendered": null,

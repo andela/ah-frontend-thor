@@ -5,10 +5,6 @@ import SignUpAction from "../../actions/signUpAction";
 import LayOut from "./SignUpHolder";
 
 
-toastr.options = {
-  positionClass: "toast-top-center",
-  preventDuplicates: true
-};
 export class SignUp extends Component {
   state = {
     username: "",
@@ -21,24 +17,7 @@ export class SignUp extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  showNotification = message => {
-    if (Object.keys(message).length > 0) {
-      if (message.errors !== undefined) {
-        if (message.errors.email && message.errors.username) {
-          toastr.warning("Username and Email are already taken ");
-        } else if (message.errors.email) {
-          toastr.warning("Email already taken");
-        } else if (message.errors.username) {
-          toastr.warning("Username already taken");
-        }
-      } else {
-        toastr.success(
-          "Successfully registered,Check your email to confirm account"
-        );
-      }
-    } else {
-    }
-  };
+
 
   onFormSubmit = e => {
     e.preventDefault();
@@ -47,7 +26,6 @@ export class SignUp extends Component {
 
     if (password === confirmPassword) {
       this.props.signupAction(this.state);
-      this.showNotification(this.props.item);
     } else {
       toastr.error("passwords don't match ");
     }

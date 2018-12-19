@@ -1,7 +1,6 @@
 import "babel-polyfill";
 import React from "react";
 import { mount, shallow } from "enzyme";
-
 import AppRouter from "../../src/components/AppRouter";
 import Header from "../../src/components/Header";
 import Root from "../../src/components/Root";

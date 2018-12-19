@@ -10,16 +10,30 @@ describe("socialLoginReducer", () => {
     });
   });
 
-  it("updates state on SOCIAL_LOGIN action type", () => {
+  it("updates state on SOCIAL_LOGIN with GOOGLE action type", () => {
     expect(
       social(undefined, {
         type: SOCIAL_LOGIN,
-        payload: { token: "nkfknfldfl" }
+        payload: { token: "token", user:{username:"joshua"}}
       })
     ).toEqual({
       isLoggedIn: true,
-      user: undefined,
-      token: "nkfknfldfl"
+      token: "token",
+      user:"joshua"
     });
   });
+
+  it("updates state on SOCIAL_LOGIN with FACEBOOK action type", () => {
+    expect(
+      social(undefined, {
+        type: SOCIAL_LOGIN,
+        payload: {user:{username:"joshua"}}
+      })
+    ).toEqual({
+      isLoggedIn: true,
+      token: undefined,
+      user:"joshua"
+    });
+  });
+
 });

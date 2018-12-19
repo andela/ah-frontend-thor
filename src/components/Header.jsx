@@ -1,14 +1,16 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { NavLink } from "react-router-dom";
 import ProfileImage from "./ProfileImage";
+import SearchForm from "../containers/search/SearchForm";
 
 const Header = () => (
   <header>
     <nav className="navbar fixed-top navbar-expand-lg navbar-dark unique-color-dark scrolling-navbar">
       <div className="container">
-        <a className="navbar-brand" href="index.html">
+        <NavLink to="/home" className="navbar-brand">
           <strong>Author's Haven</strong>
-        </a>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -22,34 +24,15 @@ const Header = () => (
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <a className="nav-link" href="articles.html">
-                Articles <span className="sr-only" />
-              </a>
+            <li>
+              <NavLink to="/post_article" className="navbar-brand">
+                create Article
+              </NavLink>
             </li>
           </ul>
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <form className="form-inline">
-                <div className="md-form my-1">
-                  <input
-                    className="form-control mr-sm-2"
-                    type="text"
-                    placeholder="Search"
-                    aria-label="Search"
-                  />
-                </div>
-              </form>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/login" className="navbar-brand">
-                Login
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/signup" className="navbar-brand">
-                Signup
-              </NavLink>
+              <SearchForm />
             </li>
             <li>
               <NavLink to={"/Profile"} className={"navbar-brand"}>

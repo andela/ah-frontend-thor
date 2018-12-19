@@ -23,14 +23,16 @@ ShallowWrapper {
         <div
           className="container"
         >
-          <a
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
             className="navbar-brand"
-            href="index.html"
+            to="/home"
           >
             <strong>
               Author's Haven
             </strong>
-          </a>
+          </NavLink>
           <button
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
@@ -51,18 +53,15 @@ ShallowWrapper {
             <ul
               className="navbar-nav mr-auto"
             >
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link"
-                  href="articles.html"
+              <li>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="navbar-brand"
+                  to="/post_article"
                 >
-                  Articles 
-                  <span
-                    className="sr-only"
-                  />
-                </a>
+                  create Article
+                </NavLink>
               </li>
             </ul>
             <ul
@@ -71,44 +70,7 @@ ShallowWrapper {
               <li
                 className="nav-item"
               >
-                <form
-                  className="form-inline"
-                >
-                  <div
-                    className="md-form my-1"
-                  >
-                    <input
-                      aria-label="Search"
-                      className="form-control mr-sm-2"
-                      placeholder="Search"
-                      type="text"
-                    />
-                  </div>
-                </form>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <NavLink
-                  activeClassName="active"
-                  aria-current="page"
-                  className="navbar-brand"
-                  to="/login"
-                >
-                  Login
-                </NavLink>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <NavLink
-                  activeClassName="active"
-                  aria-current="page"
-                  className="navbar-brand"
-                  to="/signup"
-                >
-                  Signup
-                </NavLink>
+                <withRouter(SearchForm) />
               </li>
               <li>
                 <NavLink
@@ -134,14 +96,16 @@ ShallowWrapper {
         "children": <div
           className="container"
         >
-          <a
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
             className="navbar-brand"
-            href="index.html"
+            to="/home"
           >
             <strong>
               Author's Haven
             </strong>
-          </a>
+          </NavLink>
           <button
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
@@ -162,18 +126,15 @@ ShallowWrapper {
             <ul
               className="navbar-nav mr-auto"
             >
-              <li
-                className="nav-item"
-              >
-                <a
-                  className="nav-link"
-                  href="articles.html"
+              <li>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="navbar-brand"
+                  to="/post_article"
                 >
-                  Articles 
-                  <span
-                    className="sr-only"
-                  />
-                </a>
+                  create Article
+                </NavLink>
               </li>
             </ul>
             <ul
@@ -182,44 +143,7 @@ ShallowWrapper {
               <li
                 className="nav-item"
               >
-                <form
-                  className="form-inline"
-                >
-                  <div
-                    className="md-form my-1"
-                  >
-                    <input
-                      aria-label="Search"
-                      className="form-control mr-sm-2"
-                      placeholder="Search"
-                      type="text"
-                    />
-                  </div>
-                </form>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <NavLink
-                  activeClassName="active"
-                  aria-current="page"
-                  className="navbar-brand"
-                  to="/login"
-                >
-                  Login
-                </NavLink>
-              </li>
-              <li
-                className="nav-item"
-              >
-                <NavLink
-                  activeClassName="active"
-                  aria-current="page"
-                  className="navbar-brand"
-                  to="/signup"
-                >
-                  Signup
-                </NavLink>
+                <withRouter(SearchForm) />
               </li>
               <li>
                 <NavLink
@@ -243,14 +167,16 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <a
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
               className="navbar-brand"
-              href="index.html"
+              to="/home"
             >
               <strong>
                 Author's Haven
               </strong>
-            </a>,
+            </NavLink>,
             <button
               aria-controls="navbarSupportedContent"
               aria-expanded="false"
@@ -271,18 +197,15 @@ ShallowWrapper {
               <ul
                 className="navbar-nav mr-auto"
               >
-                <li
-                  className="nav-item"
-                >
-                  <a
-                    className="nav-link"
-                    href="articles.html"
+                <li>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="navbar-brand"
+                    to="/post_article"
                   >
-                    Articles 
-                    <span
-                      className="sr-only"
-                    />
-                  </a>
+                    create Article
+                  </NavLink>
                 </li>
               </ul>
               <ul
@@ -291,44 +214,7 @@ ShallowWrapper {
                 <li
                   className="nav-item"
                 >
-                  <form
-                    className="form-inline"
-                  >
-                    <div
-                      className="md-form my-1"
-                    >
-                      <input
-                        aria-label="Search"
-                        className="form-control mr-sm-2"
-                        placeholder="Search"
-                        type="text"
-                      />
-                    </div>
-                  </form>
-                </li>
-                <li
-                  className="nav-item"
-                >
-                  <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    className="navbar-brand"
-                    to="/login"
-                  >
-                    Login
-                  </NavLink>
-                </li>
-                <li
-                  className="nav-item"
-                >
-                  <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    className="navbar-brand"
-                    to="/signup"
-                  >
-                    Signup
-                  </NavLink>
+                  <withRouter(SearchForm) />
                 </li>
                 <li>
                   <NavLink
@@ -350,13 +236,15 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "function",
             "props": Object {
+              "activeClassName": "active",
+              "aria-current": "page",
               "children": <strong>
                 Author's Haven
               </strong>,
               "className": "navbar-brand",
-              "href": "index.html",
+              "to": "/home",
             },
             "ref": null,
             "rendered": Object {
@@ -370,7 +258,7 @@ ShallowWrapper {
               "rendered": "Author's Haven",
               "type": "strong",
             },
-            "type": "a",
+            "type": [Function],
           },
           Object {
             "instance": null,
@@ -411,18 +299,15 @@ ShallowWrapper {
                 <ul
                   className="navbar-nav mr-auto"
                 >
-                  <li
-                    className="nav-item"
-                  >
-                    <a
-                      className="nav-link"
-                      href="articles.html"
+                  <li>
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      className="navbar-brand"
+                      to="/post_article"
                     >
-                      Articles 
-                      <span
-                        className="sr-only"
-                      />
-                    </a>
+                      create Article
+                    </NavLink>
                   </li>
                 </ul>,
                 <ul
@@ -431,44 +316,7 @@ ShallowWrapper {
                   <li
                     className="nav-item"
                   >
-                    <form
-                      className="form-inline"
-                    >
-                      <div
-                        className="md-form my-1"
-                      >
-                        <input
-                          aria-label="Search"
-                          className="form-control mr-sm-2"
-                          placeholder="Search"
-                          type="text"
-                        />
-                      </div>
-                    </form>
-                  </li>
-                  <li
-                    className="nav-item"
-                  >
-                    <NavLink
-                      activeClassName="active"
-                      aria-current="page"
-                      className="navbar-brand"
-                      to="/login"
-                    >
-                      Login
-                    </NavLink>
-                  </li>
-                  <li
-                    className="nav-item"
-                  >
-                    <NavLink
-                      activeClassName="active"
-                      aria-current="page"
-                      className="navbar-brand"
-                      to="/signup"
-                    >
-                      Signup
-                    </NavLink>
+                    <withRouter(SearchForm) />
                   </li>
                   <li>
                     <NavLink
@@ -492,18 +340,15 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <li
-                    className="nav-item"
-                  >
-                    <a
-                      className="nav-link"
-                      href="articles.html"
+                  "children": <li>
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      className="navbar-brand"
+                      to="/post_article"
                     >
-                      Articles 
-                      <span
-                        className="sr-only"
-                      />
-                    </a>
+                      create Article
+                    </NavLink>
                   </li>,
                   "className": "navbar-nav mr-auto",
                 },
@@ -513,48 +358,30 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <a
-                      className="nav-link"
-                      href="articles.html"
+                    "children": <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      className="navbar-brand"
+                      to="/post_article"
                     >
-                      Articles 
-                      <span
-                        className="sr-only"
-                      />
-                    </a>,
-                    "className": "nav-item",
+                      create Article
+                    </NavLink>,
                   },
                   "ref": null,
                   "rendered": Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "host",
+                    "nodeType": "function",
                     "props": Object {
-                      "children": Array [
-                        "Articles ",
-                        <span
-                          className="sr-only"
-                        />,
-                      ],
-                      "className": "nav-link",
-                      "href": "articles.html",
+                      "activeClassName": "active",
+                      "aria-current": "page",
+                      "children": "create Article",
+                      "className": "navbar-brand",
+                      "to": "/post_article",
                     },
                     "ref": null,
-                    "rendered": Array [
-                      "Articles ",
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "className": "sr-only",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "span",
-                      },
-                    ],
-                    "type": "a",
+                    "rendered": "create Article",
+                    "type": [Function],
                   },
                   "type": "li",
                 },
@@ -569,44 +396,7 @@ ShallowWrapper {
                     <li
                       className="nav-item"
                     >
-                      <form
-                        className="form-inline"
-                      >
-                        <div
-                          className="md-form my-1"
-                        >
-                          <input
-                            aria-label="Search"
-                            className="form-control mr-sm-2"
-                            placeholder="Search"
-                            type="text"
-                          />
-                        </div>
-                      </form>
-                    </li>,
-                    <li
-                      className="nav-item"
-                    >
-                      <NavLink
-                        activeClassName="active"
-                        aria-current="page"
-                        className="navbar-brand"
-                        to="/login"
-                      >
-                        Login
-                      </NavLink>
-                    </li>,
-                    <li
-                      className="nav-item"
-                    >
-                      <NavLink
-                        activeClassName="active"
-                        aria-current="page"
-                        className="navbar-brand"
-                        to="/signup"
-                      >
-                        Signup
-                      </NavLink>
+                      <withRouter(SearchForm) />
                     </li>,
                     <li>
                       <NavLink
@@ -628,88 +418,7 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": <form
-                        className="form-inline"
-                      >
-                        <div
-                          className="md-form my-1"
-                        >
-                          <input
-                            aria-label="Search"
-                            className="form-control mr-sm-2"
-                            placeholder="Search"
-                            type="text"
-                          />
-                        </div>
-                      </form>,
-                      "className": "nav-item",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": <div
-                          className="md-form my-1"
-                        >
-                          <input
-                            aria-label="Search"
-                            className="form-control mr-sm-2"
-                            placeholder="Search"
-                            type="text"
-                          />
-                        </div>,
-                        "className": "form-inline",
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": <input
-                            aria-label="Search"
-                            className="form-control mr-sm-2"
-                            placeholder="Search"
-                            type="text"
-                          />,
-                          "className": "md-form my-1",
-                        },
-                        "ref": null,
-                        "rendered": Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "host",
-                          "props": Object {
-                            "aria-label": "Search",
-                            "className": "form-control mr-sm-2",
-                            "placeholder": "Search",
-                            "type": "text",
-                          },
-                          "ref": null,
-                          "rendered": null,
-                          "type": "input",
-                        },
-                        "type": "div",
-                      },
-                      "type": "form",
-                    },
-                    "type": "li",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <NavLink
-                        activeClassName="active"
-                        aria-current="page"
-                        className="navbar-brand"
-                        to="/login"
-                      >
-                        Login
-                      </NavLink>,
+                      "children": <withRouter(SearchForm) />,
                       "className": "nav-item",
                     },
                     "ref": null,
@@ -717,48 +426,9 @@ ShallowWrapper {
                       "instance": null,
                       "key": undefined,
                       "nodeType": "function",
-                      "props": Object {
-                        "activeClassName": "active",
-                        "aria-current": "page",
-                        "children": "Login",
-                        "className": "navbar-brand",
-                        "to": "/login",
-                      },
+                      "props": Object {},
                       "ref": null,
-                      "rendered": "Login",
-                      "type": [Function],
-                    },
-                    "type": "li",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <NavLink
-                        activeClassName="active"
-                        aria-current="page"
-                        className="navbar-brand"
-                        to="/signup"
-                      >
-                        Signup
-                      </NavLink>,
-                      "className": "nav-item",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "activeClassName": "active",
-                        "aria-current": "page",
-                        "children": "Signup",
-                        "className": "navbar-brand",
-                        "to": "/signup",
-                      },
-                      "ref": null,
-                      "rendered": "Signup",
+                      "rendered": null,
                       "type": [Function],
                     },
                     "type": "li",
@@ -828,14 +498,16 @@ ShallowWrapper {
           <div
             className="container"
           >
-            <a
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
               className="navbar-brand"
-              href="index.html"
+              to="/home"
             >
               <strong>
                 Author's Haven
               </strong>
-            </a>
+            </NavLink>
             <button
               aria-controls="navbarSupportedContent"
               aria-expanded="false"
@@ -856,18 +528,15 @@ ShallowWrapper {
               <ul
                 className="navbar-nav mr-auto"
               >
-                <li
-                  className="nav-item"
-                >
-                  <a
-                    className="nav-link"
-                    href="articles.html"
+                <li>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="navbar-brand"
+                    to="/post_article"
                   >
-                    Articles 
-                    <span
-                      className="sr-only"
-                    />
-                  </a>
+                    create Article
+                  </NavLink>
                 </li>
               </ul>
               <ul
@@ -876,44 +545,7 @@ ShallowWrapper {
                 <li
                   className="nav-item"
                 >
-                  <form
-                    className="form-inline"
-                  >
-                    <div
-                      className="md-form my-1"
-                    >
-                      <input
-                        aria-label="Search"
-                        className="form-control mr-sm-2"
-                        placeholder="Search"
-                        type="text"
-                      />
-                    </div>
-                  </form>
-                </li>
-                <li
-                  className="nav-item"
-                >
-                  <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    className="navbar-brand"
-                    to="/login"
-                  >
-                    Login
-                  </NavLink>
-                </li>
-                <li
-                  className="nav-item"
-                >
-                  <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    className="navbar-brand"
-                    to="/signup"
-                  >
-                    Signup
-                  </NavLink>
+                  <withRouter(SearchForm) />
                 </li>
                 <li>
                   <NavLink
@@ -939,14 +571,16 @@ ShallowWrapper {
           "children": <div
             className="container"
           >
-            <a
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
               className="navbar-brand"
-              href="index.html"
+              to="/home"
             >
               <strong>
                 Author's Haven
               </strong>
-            </a>
+            </NavLink>
             <button
               aria-controls="navbarSupportedContent"
               aria-expanded="false"
@@ -967,18 +601,15 @@ ShallowWrapper {
               <ul
                 className="navbar-nav mr-auto"
               >
-                <li
-                  className="nav-item"
-                >
-                  <a
-                    className="nav-link"
-                    href="articles.html"
+                <li>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="navbar-brand"
+                    to="/post_article"
                   >
-                    Articles 
-                    <span
-                      className="sr-only"
-                    />
-                  </a>
+                    create Article
+                  </NavLink>
                 </li>
               </ul>
               <ul
@@ -987,44 +618,7 @@ ShallowWrapper {
                 <li
                   className="nav-item"
                 >
-                  <form
-                    className="form-inline"
-                  >
-                    <div
-                      className="md-form my-1"
-                    >
-                      <input
-                        aria-label="Search"
-                        className="form-control mr-sm-2"
-                        placeholder="Search"
-                        type="text"
-                      />
-                    </div>
-                  </form>
-                </li>
-                <li
-                  className="nav-item"
-                >
-                  <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    className="navbar-brand"
-                    to="/login"
-                  >
-                    Login
-                  </NavLink>
-                </li>
-                <li
-                  className="nav-item"
-                >
-                  <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    className="navbar-brand"
-                    to="/signup"
-                  >
-                    Signup
-                  </NavLink>
+                  <withRouter(SearchForm) />
                 </li>
                 <li>
                   <NavLink
@@ -1048,14 +642,16 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <a
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
                 className="navbar-brand"
-                href="index.html"
+                to="/home"
               >
                 <strong>
                   Author's Haven
                 </strong>
-              </a>,
+              </NavLink>,
               <button
                 aria-controls="navbarSupportedContent"
                 aria-expanded="false"
@@ -1076,18 +672,15 @@ ShallowWrapper {
                 <ul
                   className="navbar-nav mr-auto"
                 >
-                  <li
-                    className="nav-item"
-                  >
-                    <a
-                      className="nav-link"
-                      href="articles.html"
+                  <li>
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      className="navbar-brand"
+                      to="/post_article"
                     >
-                      Articles 
-                      <span
-                        className="sr-only"
-                      />
-                    </a>
+                      create Article
+                    </NavLink>
                   </li>
                 </ul>
                 <ul
@@ -1096,44 +689,7 @@ ShallowWrapper {
                   <li
                     className="nav-item"
                   >
-                    <form
-                      className="form-inline"
-                    >
-                      <div
-                        className="md-form my-1"
-                      >
-                        <input
-                          aria-label="Search"
-                          className="form-control mr-sm-2"
-                          placeholder="Search"
-                          type="text"
-                        />
-                      </div>
-                    </form>
-                  </li>
-                  <li
-                    className="nav-item"
-                  >
-                    <NavLink
-                      activeClassName="active"
-                      aria-current="page"
-                      className="navbar-brand"
-                      to="/login"
-                    >
-                      Login
-                    </NavLink>
-                  </li>
-                  <li
-                    className="nav-item"
-                  >
-                    <NavLink
-                      activeClassName="active"
-                      aria-current="page"
-                      className="navbar-brand"
-                      to="/signup"
-                    >
-                      Signup
-                    </NavLink>
+                    <withRouter(SearchForm) />
                   </li>
                   <li>
                     <NavLink
@@ -1155,13 +711,15 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "function",
               "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
                 "children": <strong>
                   Author's Haven
                 </strong>,
                 "className": "navbar-brand",
-                "href": "index.html",
+                "to": "/home",
               },
               "ref": null,
               "rendered": Object {
@@ -1175,7 +733,7 @@ ShallowWrapper {
                 "rendered": "Author's Haven",
                 "type": "strong",
               },
-              "type": "a",
+              "type": [Function],
             },
             Object {
               "instance": null,
@@ -1216,18 +774,15 @@ ShallowWrapper {
                   <ul
                     className="navbar-nav mr-auto"
                   >
-                    <li
-                      className="nav-item"
-                    >
-                      <a
-                        className="nav-link"
-                        href="articles.html"
+                    <li>
+                      <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="navbar-brand"
+                        to="/post_article"
                       >
-                        Articles 
-                        <span
-                          className="sr-only"
-                        />
-                      </a>
+                        create Article
+                      </NavLink>
                     </li>
                   </ul>,
                   <ul
@@ -1236,44 +791,7 @@ ShallowWrapper {
                     <li
                       className="nav-item"
                     >
-                      <form
-                        className="form-inline"
-                      >
-                        <div
-                          className="md-form my-1"
-                        >
-                          <input
-                            aria-label="Search"
-                            className="form-control mr-sm-2"
-                            placeholder="Search"
-                            type="text"
-                          />
-                        </div>
-                      </form>
-                    </li>
-                    <li
-                      className="nav-item"
-                    >
-                      <NavLink
-                        activeClassName="active"
-                        aria-current="page"
-                        className="navbar-brand"
-                        to="/login"
-                      >
-                        Login
-                      </NavLink>
-                    </li>
-                    <li
-                      className="nav-item"
-                    >
-                      <NavLink
-                        activeClassName="active"
-                        aria-current="page"
-                        className="navbar-brand"
-                        to="/signup"
-                      >
-                        Signup
-                      </NavLink>
+                      <withRouter(SearchForm) />
                     </li>
                     <li>
                       <NavLink
@@ -1297,18 +815,15 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <li
-                      className="nav-item"
-                    >
-                      <a
-                        className="nav-link"
-                        href="articles.html"
+                    "children": <li>
+                      <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="navbar-brand"
+                        to="/post_article"
                       >
-                        Articles 
-                        <span
-                          className="sr-only"
-                        />
-                      </a>
+                        create Article
+                      </NavLink>
                     </li>,
                     "className": "navbar-nav mr-auto",
                   },
@@ -1318,48 +833,30 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": <a
-                        className="nav-link"
-                        href="articles.html"
+                      "children": <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="navbar-brand"
+                        to="/post_article"
                       >
-                        Articles 
-                        <span
-                          className="sr-only"
-                        />
-                      </a>,
-                      "className": "nav-item",
+                        create Article
+                      </NavLink>,
                     },
                     "ref": null,
                     "rendered": Object {
                       "instance": null,
                       "key": undefined,
-                      "nodeType": "host",
+                      "nodeType": "function",
                       "props": Object {
-                        "children": Array [
-                          "Articles ",
-                          <span
-                            className="sr-only"
-                          />,
-                        ],
-                        "className": "nav-link",
-                        "href": "articles.html",
+                        "activeClassName": "active",
+                        "aria-current": "page",
+                        "children": "create Article",
+                        "className": "navbar-brand",
+                        "to": "/post_article",
                       },
                       "ref": null,
-                      "rendered": Array [
-                        "Articles ",
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "host",
-                          "props": Object {
-                            "className": "sr-only",
-                          },
-                          "ref": null,
-                          "rendered": null,
-                          "type": "span",
-                        },
-                      ],
-                      "type": "a",
+                      "rendered": "create Article",
+                      "type": [Function],
                     },
                     "type": "li",
                   },
@@ -1374,44 +871,7 @@ ShallowWrapper {
                       <li
                         className="nav-item"
                       >
-                        <form
-                          className="form-inline"
-                        >
-                          <div
-                            className="md-form my-1"
-                          >
-                            <input
-                              aria-label="Search"
-                              className="form-control mr-sm-2"
-                              placeholder="Search"
-                              type="text"
-                            />
-                          </div>
-                        </form>
-                      </li>,
-                      <li
-                        className="nav-item"
-                      >
-                        <NavLink
-                          activeClassName="active"
-                          aria-current="page"
-                          className="navbar-brand"
-                          to="/login"
-                        >
-                          Login
-                        </NavLink>
-                      </li>,
-                      <li
-                        className="nav-item"
-                      >
-                        <NavLink
-                          activeClassName="active"
-                          aria-current="page"
-                          className="navbar-brand"
-                          to="/signup"
-                        >
-                          Signup
-                        </NavLink>
+                        <withRouter(SearchForm) />
                       </li>,
                       <li>
                         <NavLink
@@ -1433,88 +893,7 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": <form
-                          className="form-inline"
-                        >
-                          <div
-                            className="md-form my-1"
-                          >
-                            <input
-                              aria-label="Search"
-                              className="form-control mr-sm-2"
-                              placeholder="Search"
-                              type="text"
-                            />
-                          </div>
-                        </form>,
-                        "className": "nav-item",
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": <div
-                            className="md-form my-1"
-                          >
-                            <input
-                              aria-label="Search"
-                              className="form-control mr-sm-2"
-                              placeholder="Search"
-                              type="text"
-                            />
-                          </div>,
-                          "className": "form-inline",
-                        },
-                        "ref": null,
-                        "rendered": Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "host",
-                          "props": Object {
-                            "children": <input
-                              aria-label="Search"
-                              className="form-control mr-sm-2"
-                              placeholder="Search"
-                              type="text"
-                            />,
-                            "className": "md-form my-1",
-                          },
-                          "ref": null,
-                          "rendered": Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "host",
-                            "props": Object {
-                              "aria-label": "Search",
-                              "className": "form-control mr-sm-2",
-                              "placeholder": "Search",
-                              "type": "text",
-                            },
-                            "ref": null,
-                            "rendered": null,
-                            "type": "input",
-                          },
-                          "type": "div",
-                        },
-                        "type": "form",
-                      },
-                      "type": "li",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": <NavLink
-                          activeClassName="active"
-                          aria-current="page"
-                          className="navbar-brand"
-                          to="/login"
-                        >
-                          Login
-                        </NavLink>,
+                        "children": <withRouter(SearchForm) />,
                         "className": "nav-item",
                       },
                       "ref": null,
@@ -1522,48 +901,9 @@ ShallowWrapper {
                         "instance": null,
                         "key": undefined,
                         "nodeType": "function",
-                        "props": Object {
-                          "activeClassName": "active",
-                          "aria-current": "page",
-                          "children": "Login",
-                          "className": "navbar-brand",
-                          "to": "/login",
-                        },
+                        "props": Object {},
                         "ref": null,
-                        "rendered": "Login",
-                        "type": [Function],
-                      },
-                      "type": "li",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": <NavLink
-                          activeClassName="active"
-                          aria-current="page"
-                          className="navbar-brand"
-                          to="/signup"
-                        >
-                          Signup
-                        </NavLink>,
-                        "className": "nav-item",
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "function",
-                        "props": Object {
-                          "activeClassName": "active",
-                          "aria-current": "page",
-                          "children": "Signup",
-                          "className": "navbar-brand",
-                          "to": "/signup",
-                        },
-                        "ref": null,
-                        "rendered": "Signup",
+                        "rendered": null,
                         "type": [Function],
                       },
                       "type": "li",

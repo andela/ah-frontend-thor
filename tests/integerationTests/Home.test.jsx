@@ -49,7 +49,7 @@ describe("<Content />", () => {
       expect(mount.bind(null, <Provider store={store}><Content /></Provider>)).not.toThrow();
     });
   });
-  
+
   it("should render container class", () => {
     const editor = shallow(<Content />);
     expect(editor.find("div.container").length).toEqual(1);
@@ -61,7 +61,8 @@ describe("<Content />", () => {
     expect(shallow(<SocialButtons />).find("Connect(Google)")).toHaveLength(1);
   });
   it("tests the footer of the app against the snapshot", () => {
-    const component = mount(<Home />);
+    const component = shallow(<Provider store={store}><Home/></Provider>);
     expect(component).toMatchSnapshot();
+
   });
 });

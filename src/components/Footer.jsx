@@ -4,18 +4,14 @@ export default () => (
   <div>
     {/* <!-- Footer --> */}
     <footer className="page-footer relative-bottom font-small unique-color-dark">
-
-
       {/* <!-- Footer Elements --> */}
       <div className="container">
-
         {/* <!-- Grid row--> */}
 
         <div className="row">
           {/* <!-- Grid column --> */}
           <div className="col-md-12 py-5">
             <div className="mb-5 flex-center">
-
               {/* <!-- Facebook --> */}
               <a className="fb-ic">
                 <i className="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x" />
@@ -31,21 +27,14 @@ export default () => (
             </div>
           </div>
           {/* <!-- Grid column --> */}
-
         </div>
         {/* <!-- Grid row--> */}
-
       </div>
-      {/* <!-- Footer Elements --> */}
-
-      {/* <!-- Copyright --> */}
-      <div className="footer-copyright text-center py-3">
-        © 2018 Copyright:
+    <div className="footer-copyright text-center py-3">
+      © 2018 Copyright:
         <a href="#">AuthorsHaven.com</a>
       </div>
       {/* <!-- Copyright --> */}
-
     </footer>
-
   </div>
 );

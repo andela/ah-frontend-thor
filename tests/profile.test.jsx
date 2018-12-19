@@ -232,6 +232,7 @@ describe(" test Actions SAVE_IMAGE ", () => {
   test("test save image", () => {
     const formData = new FormData();
     const imageId = "ijsios";
+    fetch.mockResponse(JSON.stringify({ access_token: "12345" }));
     const expectedActions = [
       { type: "FETCH_PROFILE_REQUEST" },
       { payload: "user", type: "FETCH_PROFILE_SUCCESS" }
