@@ -60,8 +60,7 @@ describe("<FollowButton />", () => {
 
 describe("<UnFollowButton />", () => {
   test("renders the component", () => {
-    const wrapper = mount(<UnFollowButton onClick={props.onClick} followedUsername={props.followedUsername} />);
-    wrapper.find("#unfollow").simulate("click");
+    const wrapper = shallow(<UnFollowButton onClick={props.onClick} followedUsername={props.followedUsername} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -74,19 +73,6 @@ describe("<FollowStatus />", () => {
   });
 });
 
-// describe("<Inputs />", () => {
-//   test("renders the component", () => {
-//     const inputComponent = shallow(<Inputs required />);
-//     expect(inputComponent).toMatchSnapshot();
-//   });
-// });
-
-// describe("<Button />", () => {
-//   test("renders the component", () => {
-//     const buttonComponent = shallow(<Button options={props.options} />);
-//     expect(buttonComponent).toMatchSnapshot();
-//   });
-// });
 
 describe("test the login container", () => {
   const middlewares = [thunk];
@@ -156,7 +142,6 @@ describe("Login", () => {
 describe("<UnFollowButton />", () => {
   describe("onClick()", () => {
     test("successfully calls the onSubmit handler", () => {
-      // const mockOnClick = jest.fn();
       const wrapper = shallow(
         <UnFollowButton onClick={props.onClick} />
       );
