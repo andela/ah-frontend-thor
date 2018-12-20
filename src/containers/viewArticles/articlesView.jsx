@@ -72,9 +72,10 @@ export class ArticleDetails extends Component {
     this.props.articlesActions();
   }
 
-  onClickHandler = (id, articleAuthor) => event => {
+  onClickHandler = (id, articleAuthor,tags) => event => {
     localStorage.setItem("articleId", id);
     localStorage.setItem("articleAuthor", articleAuthor);
+    localStorage.setItem("tags", JSON.stringify(tags));
   };
 
 
@@ -89,7 +90,8 @@ export class ArticleDetails extends Component {
           img={article.image_url}
           onClickHandler={this.onClickHandler(
             article.id,
-            article.author.username
+            article.author.username,
+            article.tag_list
           )}
         />
       ));

@@ -9,6 +9,11 @@ const listReducer = (state = bookmarksState, action) => {
       ...state,
       list: action.payload
     };
+  case "NO_BOOKMARKS":
+    return {
+      ...state,
+      list: action.payload
+    };
   default:
     return state;
   }

@@ -9,6 +9,7 @@ import {
   mapStateToProps,
   clickHandler
 } from "../../src/containers/bookmarks/Bookmarks";
+import { BOOKMARKS } from "../../src/actions/types";
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
@@ -18,24 +19,22 @@ describe("bookmaks list", () => {
   afterEach(() => {
     fetchMock.restore();
   });
-  it("test successfully fetch bookmarks", () => {
-    fetchMock.getOnce("https://ah-backend-thor.herokuapp.com/api/bookmarks/", {
-      body: { bookmarked: ["article bookmarked"] },
-      headers: {
-        "content-type": "application/json",
-        authorization: "Token hello"
-      }
-    });
+  it('Non-existent bookmarks', () => {
+    fetchMock.getOnce('https://ah-backend-thor.herokuapp.com/api/bookmarks/', {
+      headers: { 'content-type': 'application/json' },
+      body: []
+    }, 500)
 
+    const expectedActions = [
+      { type: "BOOKMARKS_LIST",
+      payload: []
+     }
+    ]
     return store.dispatch(bookmarkslist).then(() => {
-      expect(store.getActions()).toEqual([
-        {
-          type: "BOOKMARKS_LIST",
-          payload: { bookmarked: ["article bookmarked"] }
-        }
-      ]);
-    });
-  });
+      expect(store.getActions()).toEqual(expectedActions);
+    })
+  })
+
 
   it("fetching bookmarksfails", () => {
     fetch.mockReject(new Error("server error"));

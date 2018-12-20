@@ -12,7 +12,9 @@ const bookmarkslist = dispatch => {
   })
     .then(response => response.json())
     .then(value => {
-      dispatch({ type: BOOKMARKS, payload: value });
+      if (value.message !== "No Articles exist") {
+        dispatch({ type: BOOKMARKS, payload: value });
+      } 
     })
     .catch(error => error);
 };
