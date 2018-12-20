@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import Moment from "react-moment";
 import { SingleArticleAction } from "../../actions/singleArticleAction";
+import ArticleLikes from "../articleLikes/ArticleLikes";
 
 export const SocialMediaSection = () => (
   // <!--Grid column-->
@@ -87,6 +88,7 @@ export const ArticleSection = ({
       <hr />
       <TagSection tags={tags} />
     </div>
+    <ArticleLikes />
   </div>
 );
 

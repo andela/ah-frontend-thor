@@ -1,0 +1,436 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ArticleLikes /> renders the cardlayout component 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <LikesLayout
+    dislike={1}
+    like={1}
+    likeHandler={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <button
+          className="btn-lg"
+          id="btnLike"
+          name="like"
+          onClick={[MockFunction]}
+        >
+          <img
+            src="../../images/like.png"
+          />
+        </button>,
+        " ",
+        " ",
+        <span>
+          1
+        </span>,
+        "  ",
+        <button
+          className="btn-lg"
+          id="btnDislike"
+          name="dislike"
+          onClick={[MockFunction]}
+        >
+          <img
+            src="../../images/dislike.png"
+          />
+        </button>,
+        " ",
+        " ",
+        <span>
+          1
+        </span>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <img
+            src="../../images/like.png"
+          />,
+          "className": "btn-lg",
+          "id": "btnLike",
+          "name": "like",
+          "onClick": [MockFunction],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "src": "../../images/like.png",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        "type": "button",
+      },
+      " ",
+      " ",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": 1,
+        },
+        "ref": null,
+        "rendered": 1,
+        "type": "span",
+      },
+      "  ",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <img
+            src="../../images/dislike.png"
+          />,
+          "className": "btn-lg",
+          "id": "btnDislike",
+          "name": "dislike",
+          "onClick": [MockFunction],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "src": "../../images/dislike.png",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        "type": "button",
+      },
+      " ",
+      " ",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": 1,
+        },
+        "ref": null,
+        "rendered": 1,
+        "type": "span",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            className="btn-lg"
+            id="btnLike"
+            name="like"
+            onClick={[MockFunction]}
+          >
+            <img
+              src="../../images/like.png"
+            />
+          </button>,
+          " ",
+          " ",
+          <span>
+            1
+          </span>,
+          "  ",
+          <button
+            className="btn-lg"
+            id="btnDislike"
+            name="dislike"
+            onClick={[MockFunction]}
+          >
+            <img
+              src="../../images/dislike.png"
+            />
+          </button>,
+          " ",
+          " ",
+          <span>
+            1
+          </span>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <img
+              src="../../images/like.png"
+            />,
+            "className": "btn-lg",
+            "id": "btnLike",
+            "name": "like",
+            "onClick": [MockFunction],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "src": "../../images/like.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          "type": "button",
+        },
+        " ",
+        " ",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": 1,
+          },
+          "ref": null,
+          "rendered": 1,
+          "type": "span",
+        },
+        "  ",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <img
+              src="../../images/dislike.png"
+            />,
+            "className": "btn-lg",
+            "id": "btnDislike",
+            "name": "dislike",
+            "onClick": [MockFunction],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "src": "../../images/dislike.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          "type": "button",
+        },
+        " ",
+        " ",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": 1,
+          },
+          "ref": null,
+          "rendered": 1,
+          "type": "span",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`<ArticleLikes /> renders the component 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ArticleLikes
+    dislikes={1}
+    likeAction={[MockFunction]}
+    likeStatusSum={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            null,
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    likes={1}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="col-md-6 "
+      >
+        <LikesLayout
+          dislike={1}
+          like={1}
+          likeHandler={[Function]}
+        />
+      </div>,
+      "className": "mt-5 container row",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <LikesLayout
+          dislike={1}
+          like={1}
+          likeHandler={[Function]}
+        />,
+        "className": "col-md-6 ",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "dislike": 1,
+          "like": 1,
+          "likeHandler": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": "div",
+    },
+    "type": "main",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="col-md-6 "
+        >
+          <LikesLayout
+            dislike={1}
+            like={1}
+            likeHandler={[Function]}
+          />
+        </div>,
+        "className": "mt-5 container row",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <LikesLayout
+            dislike={1}
+            like={1}
+            likeHandler={[Function]}
+          />,
+          "className": "col-md-6 ",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "dislike": 1,
+            "like": 1,
+            "likeHandler": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      "type": "main",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

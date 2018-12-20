@@ -15,7 +15,7 @@ import {
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
-const store = mockStore({ todos: [] });
+const store = mockStore({ likeReducer: { likes: 0, dislikes: 0 } });
 
 describe("<SocialMediaSection/>", () => {
   it("it mounts the articles instance", () => {
@@ -25,14 +25,18 @@ describe("<SocialMediaSection/>", () => {
 
 describe("<ArticleSection/>", () => {
   it("it mounts the articles instance", () => {
-        const tags = ["code", "web"]
-    const wrapper = mount(<ArticleSection  tags= {tags}/>);
+    const tags = ["code", "web"];
+    const wrapper = mount(
+      <Provider store={ store }>
+        <ArticleSection tags={tags} />
+      </Provider>
+    );
   });
 });
 
 describe("<SingleArticle/>", () => {
   it("mounts the articles component", () => {
-    const tags = ["code", "web"]
+    const tags = ["code", "web"];
     const props = {
       singleArticleAction: () => jest.fn(),
       Article: {
@@ -52,8 +56,8 @@ describe("<SingleArticle/>", () => {
           />
         </Router>
       </Provider>
-    ).setState({tags:[]});
-    wrapper.setProps(tags)
+    ).setState({ tags: [] });
+    wrapper.setProps(tags);
   });
 });
 
