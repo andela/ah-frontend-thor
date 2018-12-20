@@ -93,9 +93,7 @@ textarea.form-control.no-border {
   width: 20%;
 }
 
-.image-input {
-  display: none;
-}
+
 .profile-card-image img {
   margin-left: auto;
   margin-right: auto;
@@ -214,7 +212,6 @@ textarea.form-control.no-border {
 /*Footer */
 .page-footer {
   width: 100%;
-  /* size: 10px; */
   position: relative;
   bottom: 0px;
 }

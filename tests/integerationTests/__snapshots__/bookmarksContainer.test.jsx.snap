@@ -1,0 +1,481 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Bookmarks /> renders the cardlayout component 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardLayout
+    bookmark={
+      Object {
+        "description": "yet",
+        "image_url": "www.unsplash.com",
+        "title": "now",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="card-body"
+      >
+        <Link
+          className="card-title"
+          id="articleLink"
+          replace={false}
+          to="/article"
+        >
+          now
+        </Link>
+        <p
+          className="card-text"
+        >
+          yet
+        </p>
+      </div>,
+      "className": "text-center mb-4 wow fadeIn card",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Link
+            className="card-title"
+            id="articleLink"
+            replace={false}
+            to="/article"
+          >
+            now
+          </Link>,
+          <p
+            className="card-text"
+          >
+            yet
+          </p>,
+        ],
+        "className": "card-body",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "now",
+            "className": "card-title",
+            "id": "articleLink",
+            "onClick": undefined,
+            "replace": false,
+            "to": "/article",
+          },
+          "ref": null,
+          "rendered": "now",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "yet",
+            "className": "card-text",
+          },
+          "ref": null,
+          "rendered": "yet",
+          "type": "p",
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="card-body"
+        >
+          <Link
+            className="card-title"
+            id="articleLink"
+            replace={false}
+            to="/article"
+          >
+            now
+          </Link>
+          <p
+            className="card-text"
+          >
+            yet
+          </p>
+        </div>,
+        "className": "text-center mb-4 wow fadeIn card",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Link
+              className="card-title"
+              id="articleLink"
+              replace={false}
+              to="/article"
+            >
+              now
+            </Link>,
+            <p
+              className="card-text"
+            >
+              yet
+            </p>,
+          ],
+          "className": "card-body",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "now",
+              "className": "card-title",
+              "id": "articleLink",
+              "onClick": undefined,
+              "replace": false,
+              "to": "/article",
+            },
+            "ref": null,
+            "rendered": "now",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "yet",
+              "className": "card-text",
+            },
+            "ref": null,
+            "rendered": "yet",
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`<Bookmarks /> renders the component 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Bookmarks
+    bookmarks={[MockFunction]}
+    lists={
+      Array [
+        Object {
+          "description": "yet",
+          "title": "now",
+        },
+        Object {
+          "description": "yet2",
+          "title": "now2",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="col-md-6 mb-3 offset-md-3"
+      >
+        <h2>
+          BOOKMARKS
+        </h2>
+        <CardLayout
+          bookmark={
+            Object {
+              "description": "yet",
+              "title": "now",
+            }
+          }
+          clickHandler={[Function]}
+        />
+        <CardLayout
+          bookmark={
+            Object {
+              "description": "yet2",
+              "title": "now2",
+            }
+          }
+          clickHandler={[Function]}
+        />
+      </div>,
+      "className": "mt-5 pt-5 container  row",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2>
+            BOOKMARKS
+          </h2>,
+          Array [
+            <CardLayout
+              bookmark={
+                Object {
+                  "description": "yet",
+                  "title": "now",
+                }
+              }
+              clickHandler={[Function]}
+            />,
+            <CardLayout
+              bookmark={
+                Object {
+                  "description": "yet2",
+                  "title": "now2",
+                }
+              }
+              clickHandler={[Function]}
+            />,
+          ],
+        ],
+        "className": "col-md-6 mb-3 offset-md-3",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "BOOKMARKS",
+          },
+          "ref": null,
+          "rendered": "BOOKMARKS",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "bookmark": Object {
+              "description": "yet",
+              "title": "now",
+            },
+            "clickHandler": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "function",
+          "props": Object {
+            "bookmark": Object {
+              "description": "yet2",
+              "title": "now2",
+            },
+            "clickHandler": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+    "type": "main",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="col-md-6 mb-3 offset-md-3"
+        >
+          <h2>
+            BOOKMARKS
+          </h2>
+          <CardLayout
+            bookmark={
+              Object {
+                "description": "yet",
+                "title": "now",
+              }
+            }
+            clickHandler={[Function]}
+          />
+          <CardLayout
+            bookmark={
+              Object {
+                "description": "yet2",
+                "title": "now2",
+              }
+            }
+            clickHandler={[Function]}
+          />
+        </div>,
+        "className": "mt-5 pt-5 container  row",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2>
+              BOOKMARKS
+            </h2>,
+            Array [
+              <CardLayout
+                bookmark={
+                  Object {
+                    "description": "yet",
+                    "title": "now",
+                  }
+                }
+                clickHandler={[Function]}
+              />,
+              <CardLayout
+                bookmark={
+                  Object {
+                    "description": "yet2",
+                    "title": "now2",
+                  }
+                }
+                clickHandler={[Function]}
+              />,
+            ],
+          ],
+          "className": "col-md-6 mb-3 offset-md-3",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "BOOKMARKS",
+            },
+            "ref": null,
+            "rendered": "BOOKMARKS",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "function",
+            "props": Object {
+              "bookmark": Object {
+                "description": "yet",
+                "title": "now",
+              },
+              "clickHandler": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "function",
+            "props": Object {
+              "bookmark": Object {
+                "description": "yet2",
+                "title": "now2",
+              },
+              "clickHandler": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      "type": "main",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

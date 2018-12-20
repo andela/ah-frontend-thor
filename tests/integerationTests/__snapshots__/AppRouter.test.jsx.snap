@@ -74,6 +74,10 @@ ShallowWrapper {
                 component={[Function]}
                 path="/searchresults/:type/:searchData"
               />
+              <Route
+                component={[Function]}
+                path="/bookmarkslist"
+              />
             </div>
           </Root>
         </React.Fragment>
@@ -148,6 +152,10 @@ ShallowWrapper {
                 component={[Function]}
                 path="/searchresults/:type/:searchData"
               />
+              <Route
+                component={[Function]}
+                path="/bookmarkslist"
+              />
             </div>
           </Root>
         </React.Fragment>,
@@ -213,6 +221,10 @@ ShallowWrapper {
                 component={[Function]}
                 path="/searchresults/:type/:searchData"
               />
+              <Route
+                component={[Function]}
+                path="/bookmarkslist"
+              />
             </div>
           </Root>,
         },
@@ -276,6 +288,10 @@ ShallowWrapper {
                 component={[Function]}
                 path="/searchresults/:type/:searchData"
               />
+              <Route
+                component={[Function]}
+                path="/bookmarkslist"
+              />
             </div>,
           },
           "ref": null,
@@ -337,6 +353,10 @@ ShallowWrapper {
                 <Route
                   component={[Function]}
                   path="/searchresults/:type/:searchData"
+                />,
+                <Route
+                  component={[Function]}
+                  path="/bookmarkslist"
                 />,
               ],
             },
@@ -499,6 +519,18 @@ ShallowWrapper {
                 "rendered": null,
                 "type": [Function],
               },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "path": "/bookmarkslist",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
             ],
             "type": "div",
           },
@@ -572,6 +604,10 @@ ShallowWrapper {
                 <Route
                   component={[Function]}
                   path="/searchresults/:type/:searchData"
+                />
+                <Route
+                  component={[Function]}
+                  path="/bookmarkslist"
                 />
               </div>
             </Root>
@@ -647,6 +683,10 @@ ShallowWrapper {
                   component={[Function]}
                   path="/searchresults/:type/:searchData"
                 />
+                <Route
+                  component={[Function]}
+                  path="/bookmarkslist"
+                />
               </div>
             </Root>
           </React.Fragment>,
@@ -712,6 +752,10 @@ ShallowWrapper {
                   component={[Function]}
                   path="/searchresults/:type/:searchData"
                 />
+                <Route
+                  component={[Function]}
+                  path="/bookmarkslist"
+                />
               </div>
             </Root>,
           },
@@ -775,6 +819,10 @@ ShallowWrapper {
                   component={[Function]}
                   path="/searchresults/:type/:searchData"
                 />
+                <Route
+                  component={[Function]}
+                  path="/bookmarkslist"
+                />
               </div>,
             },
             "ref": null,
@@ -836,6 +884,10 @@ ShallowWrapper {
                   <Route
                     component={[Function]}
                     path="/searchresults/:type/:searchData"
+                  />,
+                  <Route
+                    component={[Function]}
+                    path="/bookmarkslist"
                   />,
                 ],
               },
@@ -993,6 +1045,18 @@ ShallowWrapper {
                   "props": Object {
                     "component": [Function],
                     "path": "/searchresults/:type/:searchData",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "component": [Function],
+                    "path": "/bookmarkslist",
                   },
                   "ref": null,
                   "rendered": null,

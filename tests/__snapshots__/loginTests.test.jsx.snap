@@ -1260,20 +1260,6 @@ ShallowWrapper {
             id="navbarSupportedContent"
           >
             <ul
-              className="navbar-nav mr-auto"
-            >
-              <li>
-                <NavLink
-                  activeClassName="active"
-                  aria-current="page"
-                  className="navbar-brand"
-                  to="/post_article"
-                >
-                  create Article
-                </NavLink>
-              </li>
-            </ul>
-            <ul
               className="navbar-nav ml-auto"
             >
               <li
@@ -1333,20 +1319,6 @@ ShallowWrapper {
             id="navbarSupportedContent"
           >
             <ul
-              className="navbar-nav mr-auto"
-            >
-              <li>
-                <NavLink
-                  activeClassName="active"
-                  aria-current="page"
-                  className="navbar-brand"
-                  to="/post_article"
-                >
-                  create Article
-                </NavLink>
-              </li>
-            </ul>
-            <ul
               className="navbar-nav ml-auto"
             >
               <li
@@ -1403,20 +1375,6 @@ ShallowWrapper {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              <ul
-                className="navbar-nav mr-auto"
-              >
-                <li>
-                  <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    className="navbar-brand"
-                    to="/post_article"
-                  >
-                    create Article
-                  </NavLink>
-                </li>
-              </ul>
               <ul
                 className="navbar-nav ml-auto"
               >
@@ -1504,21 +1462,282 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                <ul
-                  className="navbar-nav mr-auto"
+              "children": <ul
+                className="navbar-nav ml-auto"
+              >
+                <li
+                  className="nav-item"
                 >
+                  <withRouter(SearchForm) />
+                </li>
+                <li>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="navbar-brand"
+                    to="/Profile"
+                  >
+                    <Connect(ProfileImage) />
+                  </NavLink>
+                </li>
+              </ul>,
+              "className": "collapse navbar-collapse",
+              "id": "navbarSupportedContent",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li
+                    className="nav-item"
+                  >
+                    <withRouter(SearchForm) />
+                  </li>,
                   <li>
                     <NavLink
                       activeClassName="active"
                       aria-current="page"
                       className="navbar-brand"
-                      to="/post_article"
+                      to="/Profile"
                     >
-                      create Article
+                      <Connect(ProfileImage) />
                     </NavLink>
-                  </li>
-                </ul>,
+                  </li>,
+                ],
+                "className": "navbar-nav ml-auto",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <withRouter(SearchForm) />,
+                    "className": "nav-item",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {},
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      className="navbar-brand"
+                      to="/Profile"
+                    >
+                      <Connect(ProfileImage) />
+                    </NavLink>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "activeClassName": "active",
+                      "aria-current": "page",
+                      "children": <Connect(ProfileImage) />,
+                      "className": "navbar-brand",
+                      "to": "/Profile",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {},
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "nav",
+    },
+    "type": "header",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <nav
+          className="navbar fixed-top navbar-expand-lg navbar-dark unique-color-dark scrolling-navbar"
+        >
+          <div
+            className="container"
+          >
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="navbar-brand"
+              to="/home"
+            >
+              <strong>
+                Author's Haven
+              </strong>
+            </NavLink>
+            <button
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              className="navbar-toggler"
+              data-target="#navbarSupportedContent"
+              data-toggle="collapse"
+              type="button"
+            >
+              <span
+                className="navbar-toggler-icon"
+              />
+            </button>
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul
+                className="navbar-nav ml-auto"
+              >
+                <li
+                  className="nav-item"
+                >
+                  <withRouter(SearchForm) />
+                </li>
+                <li>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="navbar-brand"
+                    to="/Profile"
+                  >
+                    <Connect(ProfileImage) />
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="container"
+          >
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="navbar-brand"
+              to="/home"
+            >
+              <strong>
+                Author's Haven
+              </strong>
+            </NavLink>
+            <button
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              className="navbar-toggler"
+              data-target="#navbarSupportedContent"
+              data-toggle="collapse"
+              type="button"
+            >
+              <span
+                className="navbar-toggler-icon"
+              />
+            </button>
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul
+                className="navbar-nav ml-auto"
+              >
+                <li
+                  className="nav-item"
+                >
+                  <withRouter(SearchForm) />
+                </li>
+                <li>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="navbar-brand"
+                    to="/Profile"
+                  >
+                    <Connect(ProfileImage) />
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          </div>,
+          "className": "navbar fixed-top navbar-expand-lg navbar-dark unique-color-dark scrolling-navbar",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="navbar-brand"
+                to="/home"
+              >
+                <strong>
+                  Author's Haven
+                </strong>
+              </NavLink>,
+              <button
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                className="navbar-toggler"
+                data-target="#navbarSupportedContent"
+                data-toggle="collapse"
+                type="button"
+              >
+                <span
+                  className="navbar-toggler-icon"
+                />
+              </button>,
+              <div
+                className="collapse navbar-collapse"
+                id="navbarSupportedContent"
+              >
                 <ul
                   className="navbar-nav ml-auto"
                 >
@@ -1537,66 +1756,99 @@ ShallowWrapper {
                       <Connect(ProfileImage) />
                     </NavLink>
                   </li>
-                </ul>,
-              ],
-              "className": "collapse navbar-collapse",
-              "id": "navbarSupportedContent",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
+                </ul>
+              </div>,
+            ],
+            "className": "container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": <strong>
+                  Author's Haven
+                </strong>,
+                "className": "navbar-brand",
+                "to": "/home",
+              },
+              "ref": null,
+              "rendered": Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <li>
+                  "children": "Author's Haven",
+                },
+                "ref": null,
+                "rendered": "Author's Haven",
+                "type": "strong",
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-controls": "navbarSupportedContent",
+                "aria-expanded": "false",
+                "aria-label": "Toggle navigation",
+                "children": <span
+                  className="navbar-toggler-icon"
+                />,
+                "className": "navbar-toggler",
+                "data-target": "#navbarSupportedContent",
+                "data-toggle": "collapse",
+                "type": "button",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "navbar-toggler-icon",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "span",
+              },
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <ul
+                  className="navbar-nav ml-auto"
+                >
+                  <li
+                    className="nav-item"
+                  >
+                    <withRouter(SearchForm) />
+                  </li>
+                  <li>
                     <NavLink
                       activeClassName="active"
                       aria-current="page"
                       className="navbar-brand"
-                      to="/post_article"
+                      to="/Profile"
                     >
-                      create Article
+                      <Connect(ProfileImage) />
                     </NavLink>
-                  </li>,
-                  "className": "navbar-nav mr-auto",
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <NavLink
-                      activeClassName="active"
-                      aria-current="page"
-                      className="navbar-brand"
-                      to="/post_article"
-                    >
-                      create Article
-                    </NavLink>,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "activeClassName": "active",
-                      "aria-current": "page",
-                      "children": "create Article",
-                      "className": "navbar-brand",
-                      "to": "/post_article",
-                    },
-                    "ref": null,
-                    "rendered": "create Article",
-                    "type": [Function],
-                  },
-                  "type": "li",
-                },
-                "type": "ul",
+                  </li>
+                </ul>,
+                "className": "collapse navbar-collapse",
+                "id": "navbarSupportedContent",
               },
-              Object {
+              "ref": null,
+              "rendered": Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
@@ -1685,482 +1937,6 @@ ShallowWrapper {
                 ],
                 "type": "ul",
               },
-            ],
-            "type": "div",
-          },
-        ],
-        "type": "div",
-      },
-      "type": "nav",
-    },
-    "type": "header",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <nav
-          className="navbar fixed-top navbar-expand-lg navbar-dark unique-color-dark scrolling-navbar"
-        >
-          <div
-            className="container"
-          >
-            <NavLink
-              activeClassName="active"
-              aria-current="page"
-              className="navbar-brand"
-              to="/home"
-            >
-              <strong>
-                Author's Haven
-              </strong>
-            </NavLink>
-            <button
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              className="navbar-toggler"
-              data-target="#navbarSupportedContent"
-              data-toggle="collapse"
-              type="button"
-            >
-              <span
-                className="navbar-toggler-icon"
-              />
-            </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <ul
-                className="navbar-nav mr-auto"
-              >
-                <li>
-                  <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    className="navbar-brand"
-                    to="/post_article"
-                  >
-                    create Article
-                  </NavLink>
-                </li>
-              </ul>
-              <ul
-                className="navbar-nav ml-auto"
-              >
-                <li
-                  className="nav-item"
-                >
-                  <withRouter(SearchForm) />
-                </li>
-                <li>
-                  <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    className="navbar-brand"
-                    to="/Profile"
-                  >
-                    <Connect(ProfileImage) />
-                  </NavLink>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <div
-            className="container"
-          >
-            <NavLink
-              activeClassName="active"
-              aria-current="page"
-              className="navbar-brand"
-              to="/home"
-            >
-              <strong>
-                Author's Haven
-              </strong>
-            </NavLink>
-            <button
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              className="navbar-toggler"
-              data-target="#navbarSupportedContent"
-              data-toggle="collapse"
-              type="button"
-            >
-              <span
-                className="navbar-toggler-icon"
-              />
-            </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <ul
-                className="navbar-nav mr-auto"
-              >
-                <li>
-                  <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    className="navbar-brand"
-                    to="/post_article"
-                  >
-                    create Article
-                  </NavLink>
-                </li>
-              </ul>
-              <ul
-                className="navbar-nav ml-auto"
-              >
-                <li
-                  className="nav-item"
-                >
-                  <withRouter(SearchForm) />
-                </li>
-                <li>
-                  <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    className="navbar-brand"
-                    to="/Profile"
-                  >
-                    <Connect(ProfileImage) />
-                  </NavLink>
-                </li>
-              </ul>
-            </div>
-          </div>,
-          "className": "navbar fixed-top navbar-expand-lg navbar-dark unique-color-dark scrolling-navbar",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <NavLink
-                activeClassName="active"
-                aria-current="page"
-                className="navbar-brand"
-                to="/home"
-              >
-                <strong>
-                  Author's Haven
-                </strong>
-              </NavLink>,
-              <button
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-                className="navbar-toggler"
-                data-target="#navbarSupportedContent"
-                data-toggle="collapse"
-                type="button"
-              >
-                <span
-                  className="navbar-toggler-icon"
-                />
-              </button>,
-              <div
-                className="collapse navbar-collapse"
-                id="navbarSupportedContent"
-              >
-                <ul
-                  className="navbar-nav mr-auto"
-                >
-                  <li>
-                    <NavLink
-                      activeClassName="active"
-                      aria-current="page"
-                      className="navbar-brand"
-                      to="/post_article"
-                    >
-                      create Article
-                    </NavLink>
-                  </li>
-                </ul>
-                <ul
-                  className="navbar-nav ml-auto"
-                >
-                  <li
-                    className="nav-item"
-                  >
-                    <withRouter(SearchForm) />
-                  </li>
-                  <li>
-                    <NavLink
-                      activeClassName="active"
-                      aria-current="page"
-                      className="navbar-brand"
-                      to="/Profile"
-                    >
-                      <Connect(ProfileImage) />
-                    </NavLink>
-                  </li>
-                </ul>
-              </div>,
-            ],
-            "className": "container",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "activeClassName": "active",
-                "aria-current": "page",
-                "children": <strong>
-                  Author's Haven
-                </strong>,
-                "className": "navbar-brand",
-                "to": "/home",
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Author's Haven",
-                },
-                "ref": null,
-                "rendered": "Author's Haven",
-                "type": "strong",
-              },
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "aria-controls": "navbarSupportedContent",
-                "aria-expanded": "false",
-                "aria-label": "Toggle navigation",
-                "children": <span
-                  className="navbar-toggler-icon"
-                />,
-                "className": "navbar-toggler",
-                "data-target": "#navbarSupportedContent",
-                "data-toggle": "collapse",
-                "type": "button",
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "className": "navbar-toggler-icon",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "span",
-              },
-              "type": "button",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <ul
-                    className="navbar-nav mr-auto"
-                  >
-                    <li>
-                      <NavLink
-                        activeClassName="active"
-                        aria-current="page"
-                        className="navbar-brand"
-                        to="/post_article"
-                      >
-                        create Article
-                      </NavLink>
-                    </li>
-                  </ul>,
-                  <ul
-                    className="navbar-nav ml-auto"
-                  >
-                    <li
-                      className="nav-item"
-                    >
-                      <withRouter(SearchForm) />
-                    </li>
-                    <li>
-                      <NavLink
-                        activeClassName="active"
-                        aria-current="page"
-                        className="navbar-brand"
-                        to="/Profile"
-                      >
-                        <Connect(ProfileImage) />
-                      </NavLink>
-                    </li>
-                  </ul>,
-                ],
-                "className": "collapse navbar-collapse",
-                "id": "navbarSupportedContent",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <li>
-                      <NavLink
-                        activeClassName="active"
-                        aria-current="page"
-                        className="navbar-brand"
-                        to="/post_article"
-                      >
-                        create Article
-                      </NavLink>
-                    </li>,
-                    "className": "navbar-nav mr-auto",
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <NavLink
-                        activeClassName="active"
-                        aria-current="page"
-                        className="navbar-brand"
-                        to="/post_article"
-                      >
-                        create Article
-                      </NavLink>,
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "activeClassName": "active",
-                        "aria-current": "page",
-                        "children": "create Article",
-                        "className": "navbar-brand",
-                        "to": "/post_article",
-                      },
-                      "ref": null,
-                      "rendered": "create Article",
-                      "type": [Function],
-                    },
-                    "type": "li",
-                  },
-                  "type": "ul",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
-                      <li
-                        className="nav-item"
-                      >
-                        <withRouter(SearchForm) />
-                      </li>,
-                      <li>
-                        <NavLink
-                          activeClassName="active"
-                          aria-current="page"
-                          className="navbar-brand"
-                          to="/Profile"
-                        >
-                          <Connect(ProfileImage) />
-                        </NavLink>
-                      </li>,
-                    ],
-                    "className": "navbar-nav ml-auto",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": <withRouter(SearchForm) />,
-                        "className": "nav-item",
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "function",
-                        "props": Object {},
-                        "ref": null,
-                        "rendered": null,
-                        "type": [Function],
-                      },
-                      "type": "li",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": <NavLink
-                          activeClassName="active"
-                          aria-current="page"
-                          className="navbar-brand"
-                          to="/Profile"
-                        >
-                          <Connect(ProfileImage) />
-                        </NavLink>,
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "function",
-                        "props": Object {
-                          "activeClassName": "active",
-                          "aria-current": "page",
-                          "children": <Connect(ProfileImage) />,
-                          "className": "navbar-brand",
-                          "to": "/Profile",
-                        },
-                        "ref": null,
-                        "rendered": Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {},
-                          "ref": null,
-                          "rendered": null,
-                          "type": [Function],
-                        },
-                        "type": [Function],
-                      },
-                      "type": "li",
-                    },
-                  ],
-                  "type": "ul",
-                },
-              ],
               "type": "div",
             },
           ],

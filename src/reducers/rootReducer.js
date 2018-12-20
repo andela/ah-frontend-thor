@@ -10,6 +10,7 @@ import userVerifiedReducer from "./emailVerification";
 import getAllArticlesReducer from "./articlesReducer";
 import singleArticleReducer from "./singleArticleReducer";
 import searchReducer from "./searchReducer";
+import listReducer from "./bookmarksReducer";
 
 export default combineReducers({
   signUpReducer,
@@ -20,5 +21,6 @@ export default combineReducers({
   userVerifiedReducer,
   articles: getAllArticlesReducer,
   article: singleArticleReducer,
-  search: searchReducer
+  search: searchReducer,
+  listReducer
 });

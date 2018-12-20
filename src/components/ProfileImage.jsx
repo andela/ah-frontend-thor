@@ -34,32 +34,37 @@ export class ProfileImage extends Component {
   }
 
   signedIn = image => {
-    return (
-      <div>
+    return <div>
         <ul className="navbar-nav ml-auto">
+        <li className="nav-item">
+          <NavLink to="/Profile" className="navbar-brand profile-header-name">
+            Hi {this.state.username}
+          </NavLink>
+        </li>
           <li className="nav-item">
-            <NavLink to="/Pofile" className="navbar-brand profile-header-name">
-              Hi {this.state.username}
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink to="/Profile" className="navbar-brand">
-              <img
-                src={image}
-                className="header-profile-image"
-                alt="image"
-              />
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink to="/signout" className="navbar-brand profile-header-name">
-              logout
-            </NavLink>
+            <div className="dropdown show">
+              <img src={image}
+                className="header-profile-image dropdown-toggle"
+                id="dropdownMenuLink"
+                data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"
+                alt="image" />
+              <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <NavLink to="/post_article" className="dropdown-item">
+                    Create Article
+                </NavLink>
+                <NavLink to="/bookmarkslist" className="dropdown-item">
+                    Bookmarks
+                </NavLink>
+                <NavLink to="/signout" className="dropdown-item">
+                    Logout
+                </NavLink>
+              </div>
+            </div>
           </li>
         </ul>
-      </div>
-    );
-  }
+      </div>;
+  };
 
   render() {
     const user = localStorage.getItem("username");

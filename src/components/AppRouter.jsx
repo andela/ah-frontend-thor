@@ -18,6 +18,7 @@ import "../assets/css/styles.css";
 import SignOut from "./SignOut";
 import PostArticle from "./article/PostArticle";
 import UpdateUserInfo from "../containers/EmailVerification";
+import Bookmarks from "../containers/bookmarks/Bookmarks";
 
 import Article from "../containers/viewArticles/articleView";
 import SearchResults from "../containers/search/SearchResults";
@@ -43,6 +44,7 @@ const AppRouter = () => (
               path="/searchresults/:type/:searchData"
               component={SearchResults}
             />
+            <Route path="/bookmarkslist" component={Bookmarks} />
           </div>
         </Root>
       </React.Fragment>
