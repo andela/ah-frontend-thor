@@ -37,11 +37,14 @@ export const SocialMediaSection = () => (
 );
 
 export const TagSection = tags => {
-  const tagValues = tags.tags.map((tag, index) => (
-    <span className="badge badge-pill badge-info tags" key={index}>
-      {tag}
-    </span>
-  ));
+  let tagValues
+  if(tags.tags){
+    tagValues = tags.tags.map((tag, index) => (
+      <span className="badge badge-pill badge-info tags" key={index}>
+        {tag}
+      </span>
+    ));
+  }
   return (
     <div>
       <p>
@@ -95,14 +98,6 @@ export class SingleArticle extends Component {
     const id = localStorage.getItem("articleId");
     this.props.singleArticleAction(id);
   }
-
-  state = {
-    tags:
-      JSON.parse(localStorage.getItem("tags")) == null
-        ? [""]
-        : JSON.parse(localStorage.getItem("tags"))
-  };
-
   render() {
     const article = this.props.Article.article;
     const author = localStorage.getItem("articleAuthor");
@@ -121,7 +116,7 @@ export class SingleArticle extends Component {
                   publishDate={article.created_at}
                   author={author}
                   readTime={article.read_time}
-                  tags={this.state.tags}
+                  tags={article.tag_list}
                 />
               </div>
             </section>
