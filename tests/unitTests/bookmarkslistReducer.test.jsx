@@ -21,4 +21,12 @@ describe("bookmarks reducer", () => {
       ]
     });
   });
+  it("receive no bookmarks", () => {
+    expect(listReducer([], {
+        type: "NO_BOOKMARKS",
+        payload: []
+      })).toEqual({
+      list: []
+    });
+  });
 });
