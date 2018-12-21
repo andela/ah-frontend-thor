@@ -22,6 +22,8 @@ import Bookmarks from "../containers/bookmarks/Bookmarks";
 
 import Article from "../containers/viewArticles/articleView";
 import SearchResults from "../containers/search/SearchResults";
+import ShareArticle from "../containers/shareArticle/ShareArticle";
+import DisplaySharedArticle from "../containers/shareArticle/DisplaySharedArticle";
 const AppRouter = () => (
   <Provider store={store}>
     <Router>
@@ -46,6 +48,7 @@ const AppRouter = () => (
             />
             <Route path="/bookmarkslist" component={Bookmarks} />
             <Route path="/edit_article/:id" component={PostArticle} />
+            <Route path="/display/:slug" component={DisplaySharedArticle} />
           </div>
         </Root>
       </React.Fragment>

@@ -15,13 +15,7 @@ import {
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
-const store = mockStore({ todos: [] });
-
-describe("<SocialMediaSection/>", () => {
-  it("it mounts the articles instance", () => {
-    const wrapper = shallow(<SocialMediaSection />);
-  });
-});
+const store = mockStore({ shareLink: {link: {}} });
 
 describe("<ArticleSection/>", () => {
   it("it mounts the articles instance", () => {

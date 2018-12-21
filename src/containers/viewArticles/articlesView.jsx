@@ -89,7 +89,8 @@ export class ArticleDetails extends Component {
           img={article.image_url}
           onClickHandler={this.onClickHandler(
             article.id,
-            article.author.username
+            article.author.username,
+            article.tag_list
           )}
         />
       ));
