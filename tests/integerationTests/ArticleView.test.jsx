@@ -1,3 +1,6 @@
+/* eslint-disable react/jsx-props-no-multi-spaces */
+/* eslint-disable no-unused-vars */
+/* eslint-disable indent */
 import { mount, shallow } from "enzyme";
 import React from "react";
 import thunk from "redux-thunk";
@@ -15,7 +18,7 @@ import {
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
-const store = mockStore({ todos: [] });
+const store = mockStore({ followStatusReducer: {results: []} });
 
 describe("<SocialMediaSection/>", () => {
   it("it mounts the articles instance", () => {
@@ -25,14 +28,14 @@ describe("<SocialMediaSection/>", () => {
 
 describe("<ArticleSection/>", () => {
   it("it mounts the articles instance", () => {
-        const tags = ["code", "web"]
-    const wrapper = mount(<ArticleSection  tags= {tags}/>);
+        const tags = ["code", "web"];
+    const wrapper = mount(<ArticleSection  tags={tags} />);
   });
 });
 
 describe("<SingleArticle/>", () => {
   it("mounts the articles component", () => {
-    const tags = ["code", "web"]
+    const tags = ["code", "web"];
     const props = {
       singleArticleAction: () => jest.fn(),
       Article: {
@@ -41,7 +44,7 @@ describe("<SingleArticle/>", () => {
           description: "Ever wonder how",
           id: 20
         }
-      }
+      },
     };
     const wrapper = mount(
       <Provider store={store}>
@@ -53,12 +56,13 @@ describe("<SingleArticle/>", () => {
         </Router>
       </Provider>
     ).setState({tags:[]});
-    wrapper.setProps(tags)
+    wrapper.setProps(tags);
   });
 });
 
 describe("Checks whether mapstate to props returns", () => {
   const expectedProp = {
+
     singleArticleReducer: {
       article: [{ id: 5, user: "chucky", body: "user already registered" }]
     }

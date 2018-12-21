@@ -1,14 +1,10 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/jsx-closing-tag-location */
 /* eslint-disable jsx-a11y/label-has-for */
-/* eslint-disable react/jsx-indent-props */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable react/jsx-one-expression-per-line */
-/* eslint-disable react/jsx-first-prop-new-line */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable indent */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable react/jsx-indent */
+/* eslint-disable react/jsx-one-expression-per-line */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/destructuring-assignment */
+
+
 import React from "react";
 import renderSocialAuthButtons from "./loginHelpers";
 

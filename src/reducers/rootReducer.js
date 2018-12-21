@@ -1,16 +1,21 @@
+/* eslint-disable import/no-named-as-default */
 // contains all teh reducers of the app
 import { combineReducers } from "redux";
 
+import followReducer from "./followReducer";
 import signUpReducer from "./signUpReducer";
 import profileReducer from "./profileReducer";
 import loginReducer from "./loginReducer";
 import social from "./socialReducer";
 import userVerifiedReducer from "./emailVerification";
-import getAllArticlesReducer from "./articlesReducer";
-import singleArticleReducer from "./singleArticleReducer";
+import getAllArticlesReducer  from "./articlesReducer";
+import singleArticleReducer  from "./singleArticleReducer";
 import searchReducer from "./searchReducer";
 import listReducer from "./bookmarksReducer";
 import {updateArticleReducer, articleReducer} from "./articleReducer";
+import followStatusReducer from "./followStatusReducer";
+import unfollowReducer from "./unfollowReducer";
+import followingStatusReducer from "./followingStatusReducer";
 
 export default combineReducers({
   signUpReducer,
@@ -19,9 +24,13 @@ export default combineReducers({
   social,
   articleReducer,
   userVerifiedReducer,
-  articles: getAllArticlesReducer,
-  article: singleArticleReducer,
+  articles:getAllArticlesReducer,
+  article:singleArticleReducer,
   search: searchReducer,
   listReducer,
-  updateArticleReducer
+  updateArticleReducer,
+  followReducer,
+  followStatusReducer,
+  unfollowReducer,
+  followingStatusReducer
 });

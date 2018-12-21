@@ -3,22 +3,24 @@
 /* eslint-disable no-dupe-keys */
 /* eslint-disable no-lone-blocks */
 
-import {errorAlert, alert} from "../actions/loginActions";
+import {alert} from "../actions/loginActions";
 
-const loginChecker = (state, action) => {
+function followChecker(state, action){
+  // Reducer for follow action
   switch (action.type) {
-  case "LOGIN":{
+  case "FOLLOW_USER":{
+    // Foillowing user
     if (action.payload) {
-      alert("success", null, action.payload.username, action.payload.user_token, "/");
+      window.location.reload();
       return {
         ...state,
-        token: action.payload.user_token
+        followStatus: action.payload
       };
     }};
 
-  case "LOGIN_ERROR":{
+  case "FOLLOW_ERROR":{
     if (action.payload) {
-      errorAlert("error", action.payload);
+      alert("error", action.payload, null, null, null);
       return {
         ...state,
         errors: action.payload
@@ -31,8 +33,9 @@ const loginChecker = (state, action) => {
 };
 
 const initialState = {
+  followedByUser: [],
   errors: "",
-  user: null
+  data: null
 };
 
-export default (state = initialState, action) => (loginChecker(state, action));
+export default (state = initialState, action) => (followChecker(state, action));
