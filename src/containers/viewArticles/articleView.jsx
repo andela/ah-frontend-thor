@@ -2,39 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import Moment from "react-moment";
 import { SingleArticleAction } from "../../actions/singleArticleAction";
-
-export const SocialMediaSection = () => (
-  // <!--Grid column-->
-  <div className="social-view col-md-2 mb-4">
-    <div className="mb-4 wow fadeIn">
-      {/* <!--Card content--> */}
-
-      {/* <!-- Grid column --> */}
-      <div className="col-md-2 col-lg-2 text-center mx-auto my-4">
-        <p>SHARE</p>
-        {/* <!-- Social buttons --> */}
-        {/* <!-- Facebook --> */}
-        <a className="px-2 fa-3x fb-ic btn-floating btn-fb">
-          <i className="fa fa-facebook" />
-        </a>
-        {/* <!-- Twitter --> */}
-        <a className="px-2 fa-3x tw-ic btn-floating btn-tw">
-          <i className="fa fa-twitter" />
-        </a>
-        {/* <!-- Google Plus --> */}
-        <a className="px-2 fa-3x li-ic btn-floating btn-gplus">
-          <i className="fa fa-google-plus" />
-        </a>
-        <p>CLAP</p>
-        <a className="px-2 fb-ic btn-floating btn-fb">
-          <i className="fa-3x fa fa-sign-language" />
-          <span className="w3-badge">9</span>
-        </a>
-      </div>
-      <div />
-    </div>
-  </div>
-);
+import ShareArticle from "../shareArticle/ShareArticle";
+import { showCard } from "../shareArticle/DisplaySharedArticle";
 
 export const TagSection = tags => {
   let tagValues
@@ -73,19 +42,7 @@ export const ArticleSection = ({
 
     <div className="card mb-4 wow fadeIn">
       {/* <!--Card content--> */}
-      <div className="card-body">
-        <p className="read__time">{readTime}</p>
-        <p className="h5 my-4">{description}</p>
-        <p>{body}</p>
-        <p className="publish__date">
-            Published on:
-          <Moment format="YYYY/MM/DD">{publishDate}</Moment>
-        </p>
-        <p>
-            By:
-          {author}
-        </p>
-      </div>
+      {showCard(readTime,description,body,publishDate,author)}
 
       <hr />
       <TagSection tags={tags} />
@@ -98,6 +55,7 @@ export class SingleArticle extends Component {
     const id = localStorage.getItem("articleId");
     this.props.singleArticleAction(id);
   }
+
   render() {
     const article = this.props.Article.article;
     const author = localStorage.getItem("articleAuthor");
@@ -108,7 +66,7 @@ export class SingleArticle extends Component {
             <section className="mt-4">
               {/* <!--Grid row--> */}
               <div className="row">
-                <SocialMediaSection />
+                <ShareArticle slug={this.props.Article.article.slug} />
                 <ArticleSection
                   img={article.image_url}
                   description={article.description}

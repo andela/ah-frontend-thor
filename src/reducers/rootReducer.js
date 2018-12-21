@@ -11,6 +11,9 @@ import singleArticleReducer from "./singleArticleReducer";
 import searchReducer from "./searchReducer";
 import listReducer from "./bookmarksReducer";
 import {updateArticleReducer, articleReducer} from "./articleReducer";
+import shareArticleReducer from "./shareArticleReducer";
+import displaySharedArticleReducer from "./displaySharedArticleReducer";
+
 
 export default combineReducers({
   signUpReducer,
@@ -23,5 +26,7 @@ export default combineReducers({
   article: singleArticleReducer,
   search: searchReducer,
   listReducer,
-  updateArticleReducer
+  updateArticleReducer,
+  shareLink: shareArticleReducer,
+  display: displaySharedArticleReducer
 });

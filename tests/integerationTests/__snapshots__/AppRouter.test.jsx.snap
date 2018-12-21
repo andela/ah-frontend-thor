@@ -82,6 +82,10 @@ ShallowWrapper {
                 component={[Function]}
                 path="/edit_article/:id"
               />
+              <Route
+                component={[Function]}
+                path="/display/:slug"
+              />
             </div>
           </Root>
         </React.Fragment>
@@ -164,6 +168,10 @@ ShallowWrapper {
                 component={[Function]}
                 path="/edit_article/:id"
               />
+              <Route
+                component={[Function]}
+                path="/display/:slug"
+              />
             </div>
           </Root>
         </React.Fragment>,
@@ -237,6 +245,10 @@ ShallowWrapper {
                 component={[Function]}
                 path="/edit_article/:id"
               />
+              <Route
+                component={[Function]}
+                path="/display/:slug"
+              />
             </div>
           </Root>,
         },
@@ -308,6 +320,10 @@ ShallowWrapper {
                 component={[Function]}
                 path="/edit_article/:id"
               />
+              <Route
+                component={[Function]}
+                path="/display/:slug"
+              />
             </div>,
           },
           "ref": null,
@@ -377,6 +393,10 @@ ShallowWrapper {
                 <Route
                   component={[Function]}
                   path="/edit_article/:id"
+                />,
+                <Route
+                  component={[Function]}
+                  path="/display/:slug"
                 />,
               ],
             },
@@ -563,6 +583,18 @@ ShallowWrapper {
                 "rendered": null,
                 "type": [Function],
               },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "path": "/display/:slug",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
             ],
             "type": "div",
           },
@@ -644,6 +676,10 @@ ShallowWrapper {
                 <Route
                   component={[Function]}
                   path="/edit_article/:id"
+                />
+                <Route
+                  component={[Function]}
+                  path="/display/:slug"
                 />
               </div>
             </Root>
@@ -727,6 +763,10 @@ ShallowWrapper {
                   component={[Function]}
                   path="/edit_article/:id"
                 />
+                <Route
+                  component={[Function]}
+                  path="/display/:slug"
+                />
               </div>
             </Root>
           </React.Fragment>,
@@ -800,6 +840,10 @@ ShallowWrapper {
                   component={[Function]}
                   path="/edit_article/:id"
                 />
+                <Route
+                  component={[Function]}
+                  path="/display/:slug"
+                />
               </div>
             </Root>,
           },
@@ -871,6 +915,10 @@ ShallowWrapper {
                   component={[Function]}
                   path="/edit_article/:id"
                 />
+                <Route
+                  component={[Function]}
+                  path="/display/:slug"
+                />
               </div>,
             },
             "ref": null,
@@ -940,6 +988,10 @@ ShallowWrapper {
                   <Route
                     component={[Function]}
                     path="/edit_article/:id"
+                  />,
+                  <Route
+                    component={[Function]}
+                    path="/display/:slug"
                   />,
                 ],
               },
@@ -1121,6 +1173,18 @@ ShallowWrapper {
                   "props": Object {
                     "component": [Function],
                     "path": "/edit_article/:id",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "component": [Function],
+                    "path": "/display/:slug",
                   },
                   "ref": null,
                   "rendered": null,
