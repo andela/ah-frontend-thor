@@ -30,5 +30,23 @@ describe("<PostArticle />", () => {
   it("renders <Provider/> correctly on Edit", () => {
     expect(provider).toMatchSnapshot();
   });
+  it("renders <Provider/> correctly on delete", () => {
+    expect(provider).toMatchSnapshot();
+  });
+  it("renders <Provider/> correctly on delete and finds the delete button", () => {
+    
+    const widgetFn = provider
+      .dive()
+      .instance()
+      .onClick();
+    expect(widgetFn);
+  });
+  it("should render a button that handles click actions", () => {
+    expect(
+      PostArticleComponent.find("button#deleteArticle").simulate("click")
+    );
+  });
+
+  
 
 });

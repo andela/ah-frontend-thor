@@ -5,7 +5,9 @@ import {
   PROFILE_ARTICLES,
   GET_ARTICLE_BY_ID,
   UPDATE_ARTICLE,
-  UPDATE_FAIL
+  UPDATE_FAIL,
+  DELETE_ARTICLE,
+  DELETE_FAIL
 } from "./types";
 
 const createArticles = articleData => dispatch => {
@@ -52,30 +54,40 @@ const getArticleById = id => dispatch =>
       })
     );
 
-const updateArticle = (articleData, id) => dispatch => {
-  const data = { article: articleData };
-  const token = localStorage.getItem("token");
-  return fetch(`https://ah-backend-thor.herokuapp.com/api/articles/${id}`, {
-    method: "PATCH",
+const fetchHelper = (id, methods, body, status, tokenVariable, actionType1, actionType2) =>dispatch=>
+  fetch(`https://ah-backend-thor.herokuapp.com/api/articles/${id}`, {
+    method: methods,
     headers: {
       "content-type": "application/json",
-      Authorization: `Token ${token}`
+      Authorization: `Token ${tokenVariable}`
     },
-    body: JSON.stringify(data)
+    body: body
   })
     .then(res => {
       const resp = res.json();
-      if (res.status !== 200) {
+      if (res.status !== status) {
         resp.then(article =>
-          dispatch({ type: UPDATE_FAIL, payload: article }));
+          dispatch({ type: actionType1, payload: article }));
       } else {
         resp.then(article =>
-          dispatch({ type: UPDATE_ARTICLE, payload: article }));
+          dispatch({ type: actionType2, payload: article }));
       }
     });
+
+const updateArticle = (articleData, id) => {
+  const data = { article: articleData };
+  const token = localStorage.getItem("token");
+  return fetchHelper(id, "PATCH", JSON.stringify(data), 200, token, UPDATE_FAIL, UPDATE_ARTICLE);
+  
+};
+
+const deleteArticle = (id) => {
+  const token = localStorage.getItem("token");
+  return fetchHelper(id, "DELETE", {}, 204, token, DELETE_ARTICLE, DELETE_FAIL);
 };
 
 export { getAuthorArticles };
 export { getArticleById };
 export { createArticles };
 export { updateArticle };
+export { deleteArticle };
