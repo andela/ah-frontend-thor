@@ -131,7 +131,7 @@ export class EditProfile extends Component {
       <div className="container ">
         <section className="mt-4 section-profile-edit">
           <div className="row">
-            <div className="col-md-12 ">
+            <div className="col-md-12">
               <div className="card cloudy-knoxville-gradient mb-4 wow fadeIn">
                 <div>{this.editDataHeading()}</div>
                 <form onSubmit={this.onSubmit}>
